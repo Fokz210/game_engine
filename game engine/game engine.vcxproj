@@ -131,6 +131,7 @@
     <ClCompile Include="render_manager.cpp" />
     <ClCompile Include="sprite_game_object.cpp" />
     <ClCompile Include="test_sprite.cpp" />
+    <ClCompile Include="test_wall.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="drawable_game_object.h" />
@@ -140,6 +141,7 @@
     <ClInclude Include="render_manager.h" />
     <ClInclude Include="sprite_game_object.h" />
     <ClInclude Include="test_sprite.h" />
+    <ClInclude Include="test_wall.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

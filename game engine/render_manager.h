@@ -24,7 +24,7 @@ public:
 
 protected:
 	objects_array objects_;
-	lights_array lighing_;
+	lights_array lighting_;
 	opaques_array opaques_;
 
 	sf::Shader * lighting_shader_;
