@@ -64,11 +64,14 @@ void render_manager::render (sf::RenderTarget& target)
 	for (int i = 0; i < lighting_.size (); i++)
 		lights[i] = lighting_[i]->get_position ();
 
-	lighting_shader_->setUniformArray ("bounds", bounds, bounds_size);
-	lighting_shader_->setUniformArray ("lights", lights, lights_size);
+	lighting_shader_->setUniform ("aa", 0.0f);
+	lighting_shader_->setUniform ("bb", 1.1f);
+
+	lighting_shader_->setUniform ("current", sf::Shader::CurrentTexture);
 
 	for (auto&& el : objects_)
 		target.draw (el->get_drawable (), lighting_shader_);
+
 
 	delete[] bounds;
 	delete[] lights;
