@@ -143,6 +143,9 @@
     <ClInclude Include="test_sprite.h" />
     <ClInclude Include="test_wall.h" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="light.glsl" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
