@@ -15,15 +15,15 @@ bool intersect (vec2 a, vec2 b, vec2 c, vec2 d);
 
 void main ()
 {
-    vec4 color = texture2D (current, gl_TexCoord[0].st);
-
-    if (!need_draw())
-        color.xyz = vec3(0.0, 0.0, 0.0);
-
     vec2 light_pos = vec2 (light.x, 1080.0 - light.y);
-
     float dist = distance(gl_FragCoord.xy, light_pos);
+    if (dist > light.z || !need_draw())
+    {
+        gl_FragColor = vec4 (0.0, 0.0, 0.0, 1.0);
+        return;
+    }
 
+    vec4 color = texture2D (current, gl_TexCoord[0].st);
     gl_FragColor = color * (1.0 - dist / light.z);
 }
 
