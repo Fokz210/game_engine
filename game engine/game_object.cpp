@@ -4,3 +4,7 @@ game_object::game_object ()
 {
 
 }
+
+game_object::~game_object ()
+{
+}

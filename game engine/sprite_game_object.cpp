@@ -31,3 +31,18 @@ void sprite_game_object::update ()
 {
 	//none
 }
+
+sf::Drawable& sprite_game_object::get_drawable ()
+{
+	return sprite_;
+}
+
+sf::Vector2f sprite_game_object::get_size () const
+{
+	return sf::Vector2f(sprite_.getTexture ()->getSize ().x, sprite_.getTexture ()->getSize ().y);
+}
+
+sf::Vector2f sprite_game_object::get_offset () const
+{
+	return sprite_.getPosition ();
+}
