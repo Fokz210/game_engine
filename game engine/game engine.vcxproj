@@ -144,11 +144,7 @@
     <ClInclude Include="test_wall.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="light.frag" />
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="tex\blank.png" />
-    <Image Include="tex\block.png" />
+    <None Include="light.glsl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -13,9 +13,6 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Textures">
-      <UniqueIdentifier>{7d6518cb-4c0d-4a0f-bbe1-a8f5d5e18cf7}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -73,15 +70,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="tex\blank.png">
-      <Filter>Textures</Filter>
-    </Image>
-    <Image Include="tex\block.png">
-      <Filter>Textures</Filter>
-    </Image>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="light.frag">
+    <None Include="light.glsl">
       <Filter>Source Files</Filter>
     </None>
   </ItemGroup>
