@@ -6,7 +6,6 @@ uniform int bounds_size;
 uniform sampler2D current;
 
 uniform vec2 offset;
-uniform vec2 resolution;
 uniform vec2 tex_size;
 
 bool need_draw();
@@ -19,7 +18,7 @@ void main ()
     vec4 color = texture2D (current, gl_TexCoord[0].st);
 
     if (!need_draw())
-        color.xyz = vec3(0.0, 0.0, 0.0);
+        color.xyz = vec3(0.1, 0.1, 0.1);
 
     gl_FragColor = color;
 }
@@ -31,10 +30,10 @@ bool need_draw ()
 
     for (int i = 0; i < bounds_size; i++)
     {
-        if (intersect (global_pos, light, bounds[i], bounds[i + 1]) ||
-            intersect (global_pos, light, bounds[i + 1], bounds [i + 2]) ||
-            intersect (global_pos, light, bounds[i + 2], bounds [i + 3]) ||
-            intersect (global_pos, light, bounds[i + 3], bounds [i]))
+        if (intersect (global_pos, light, bounds[i * 4], bounds[i * 4 + 1]) ||
+            intersect (global_pos, light, bounds[i * 4 + 1], bounds [i * 4 + 2]) ||
+            intersect (global_pos, light, bounds[i * 4 + 2], bounds [i * 4 + 3]) ||
+            intersect (global_pos, light, bounds[i * 4 + 3], bounds [i * 4]))
             return false;
     }
 

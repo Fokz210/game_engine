@@ -66,12 +66,10 @@ void render_manager::render (sf::RenderTarget& target)
 
 	lighting_shader_->setUniform ("current", sf::Shader::CurrentTexture);
 
-	lighting_shader_->setUniform ("resolution", sf::Glsl::Vec2 (1920, 1080));
-
 	for (auto&& el : objects_)
 	{
 		lighting_shader_->setUniform ("offset", el->get_offset ());
-		lighting_shader_->setUniform ("size", el->get_size ());
+		lighting_shader_->setUniform ("tex_size", el->get_size ());
 		target.draw (el->get_drawable (), lighting_shader_);
 	}
 }

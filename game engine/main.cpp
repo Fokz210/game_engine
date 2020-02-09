@@ -17,6 +17,9 @@ int main ()
 	test_wall wall (wall_sprite);
 	wall.get_sprite ().setPosition (400, 400);
 
+	test_wall wall2 (wall_sprite);
+	wall2.get_sprite ().setPosition (900, 400);
+
 	sf::Texture back_texture;
 	back_texture.loadFromFile ("tex/blank.png");
 
@@ -29,8 +32,10 @@ int main ()
 
 	r_manager.get_lights_array ().push_back (&light);
 	r_manager.get_opaques_array ().push_back (&wall);
+	r_manager.get_opaques_array ().push_back (&wall2);
 	r_manager.get_objects_array ().push_back (&back);
 	r_manager.get_objects_array ().push_back (&wall);
+	r_manager.get_objects_array ().push_back (&wall2);
 
 	while (window.isOpen ())
 	{
