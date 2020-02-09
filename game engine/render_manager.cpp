@@ -45,11 +45,9 @@ void render_manager::load_shader (std::string shader_path)
 
 void render_manager::render (sf::RenderTarget& target)
 {
-	int bounds_size = 64;
-	int lights_size = 64;
+	const int bounds_size = 64;
 
-	sf::Glsl::Vec2* bounds = new sf::Glsl::Vec2[bounds_size];
-	sf::Glsl::Vec2* lights = new sf::Glsl::Vec2[lights_size];
+	sf::Glsl::Vec2 bounds[bounds_size] = {};
 
 	for (int i = 0; i < opaques_.size (); i++)
 	{
@@ -59,20 +57,21 @@ void render_manager::render (sf::RenderTarget& target)
 		bounds[i * 4 + 1] = sf::Glsl::Vec2(rect.left + rect.width, rect.top              );
 		bounds[i * 4 + 2] = sf::Glsl::Vec2(rect.left + rect.width, rect.top + rect.height);
 		bounds[i * 4 + 3] = sf::Glsl::Vec2(rect.left             , rect.top + rect.height);
-	}
+	};
 
-	for (int i = 0; i < lighting_.size (); i++)
-		lights[i] = lighting_[i]->get_position ();
+	lighting_shader_->setUniformArray ("bounds", bounds, bounds_size);
+	lighting_shader_->setUniform ("light", lighting_[0]->get_position());
 
-	lighting_shader_->setUniform ("aa", 0.0f);
-	lighting_shader_->setUniform ("bb", 1.1f);
+	lighting_shader_->setUniform ("bounds_size", int (opaques_.size()));
 
 	lighting_shader_->setUniform ("current", sf::Shader::CurrentTexture);
 
+	lighting_shader_->setUniform ("resolution", sf::Glsl::Vec2 (1920, 1080));
+
 	for (auto&& el : objects_)
+	{
+		lighting_shader_->setUniform ("offset", el->get_offset ());
+		lighting_shader_->setUniform ("size", el->get_size ());
 		target.draw (el->get_drawable (), lighting_shader_);
-
-
-	delete[] bounds;
-	delete[] lights;
+	}
 }
