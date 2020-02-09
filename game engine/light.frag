@@ -1,5 +1,5 @@
 uniform vec2 bounds[64];
-uniform vec2 light;
+uniform vec3 light;
 
 uniform int bounds_size;
 
@@ -18,9 +18,13 @@ void main ()
     vec4 color = texture2D (current, gl_TexCoord[0].st);
 
     if (!need_draw())
-        color.xyz = vec3(0.1, 0.1, 0.1);
+        color.xyz = vec3(0.0, 0.0, 0.0);
 
-    gl_FragColor = color;
+    vec2 light_pos = vec2 (light.x, 1080.0 - light.y);
+
+    float dist = distance(gl_FragCoord.xy, light_pos);
+
+    gl_FragColor = color * (1.0 - dist / light.z);
 }
 
 bool need_draw ()
@@ -30,10 +34,10 @@ bool need_draw ()
 
     for (int i = 0; i < bounds_size; i++)
     {
-        if (intersect (global_pos, light, bounds[i * 4], bounds[i * 4 + 1]) ||
-            intersect (global_pos, light, bounds[i * 4 + 1], bounds [i * 4 + 2]) ||
-            intersect (global_pos, light, bounds[i * 4 + 2], bounds [i * 4 + 3]) ||
-            intersect (global_pos, light, bounds[i * 4 + 3], bounds [i * 4]))
+        if (intersect (global_pos, light.xy, bounds[i * 4], bounds[i * 4 + 1]) ||
+            intersect (global_pos, light.xy, bounds[i * 4 + 1], bounds [i * 4 + 2]) ||
+            intersect (global_pos, light.xy, bounds[i * 4 + 2], bounds [i * 4 + 3]) ||
+            intersect (global_pos, light.xy, bounds[i * 4 + 3], bounds [i * 4]))
             return false;
     }
 
