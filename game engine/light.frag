@@ -1,3 +1,5 @@
+uniform bool lanthern;
+
 uniform vec2 bounds[64];
 uniform vec3 light;
 
@@ -24,6 +26,9 @@ void main ()
     }
 
     vec4 color = texture2D (current, gl_TexCoord[0].st);
+
+    color = color + vec4 (0.1 - dist / light.z / 1000.0, 0.05 - dist / light.z / 1000.0, 0.0, 0.0);
+
     gl_FragColor = color * (1.0 - dist / light.z);
 }
 
@@ -47,6 +52,7 @@ bool need_draw ()
 bool intersect (vec2 a, vec2 b, vec2 c, vec2 d)
 {
     return intersect_1 (a.x, b.x, c.x, d.x)
+
 		&& intersect_1 (a.y, b.y, c.y, d.y)
 		&& area(a,b,c) * area(a,b,d) <= 0.0
 		&& area(c,d,a) * area(c,d,b) <= 0.0;

@@ -53,14 +53,14 @@ void render_manager::render (sf::RenderTarget& target)
 	{
 		sf::FloatRect rect = opaques_[i]->get_bounds ();
 
-		bounds[i * 4    ] = sf::Glsl::Vec2(rect.left             , rect.top              );
-		bounds[i * 4 + 1] = sf::Glsl::Vec2(rect.left + rect.width, rect.top              );
-		bounds[i * 4 + 2] = sf::Glsl::Vec2(rect.left + rect.width, rect.top + rect.height);
-		bounds[i * 4 + 3] = sf::Glsl::Vec2(rect.left             , rect.top + rect.height);
+		bounds[i * 4] = sf::Glsl::Vec2 (rect.left, rect.top);
+		bounds[i * 4 + 1] = sf::Glsl::Vec2 (rect.left + rect.width, rect.top);
+		bounds[i * 4 + 2] = sf::Glsl::Vec2 (rect.left + rect.width, rect.top + rect.height);
+		bounds[i * 4 + 3] = sf::Glsl::Vec2 (rect.left, rect.top + rect.height);
 	};
 
 	lighting_shader_->setUniformArray ("bounds", bounds, bounds_size);
-	lighting_shader_->setUniform ("light", sf::Glsl::Vec3 (lighting_[0]->get_position().x, lighting_[0]->get_position().y, 700));
+	lighting_shader_->setUniform ("light", sf::Glsl::Vec3 (lighting_[0]->get_position().x, lighting_[0]->get_position().y, lighting_[0]->get_radius()));
 
 	lighting_shader_->setUniform ("bounds_size", int (opaques_.size()));
 

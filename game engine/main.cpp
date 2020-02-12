@@ -9,6 +9,8 @@ int main ()
 
 	light_source light;
 
+	light.set_radius (3000.f);
+
 	sf::Texture wall_texture;
 	wall_texture.loadFromFile ("tex/block.png");
 	
@@ -20,6 +22,9 @@ int main ()
 	test_wall wall2 (wall_sprite);
 	wall2.get_sprite ().setPosition (900, 400);
 
+	test_wall wall3 (wall_sprite);
+	wall3.get_sprite ().setPosition (1200, 400);
+
 	sf::Texture back_texture;
 	back_texture.loadFromFile ("tex/blank.png");
 
@@ -30,12 +35,14 @@ int main ()
 	render_manager r_manager;
 	r_manager.load_shader ("light.frag");
 
-	r_manager.get_lights_array ().push_back (&light);
-	r_manager.get_opaques_array ().push_back (&wall);
+	r_manager.get_lights_array  ().push_back (&light);
+	r_manager.get_opaques_array ().push_back (&wall) ;
 	r_manager.get_opaques_array ().push_back (&wall2);
-	r_manager.get_objects_array ().push_back (&back);
-	r_manager.get_objects_array ().push_back (&wall);
+	r_manager.get_opaques_array ().push_back (&wall3);
+	r_manager.get_objects_array ().push_back (&back) ;
+	r_manager.get_objects_array ().push_back (&wall) ;
 	r_manager.get_objects_array ().push_back (&wall2);
+	r_manager.get_objects_array ().push_back (&wall3);
 
 	while (window.isOpen ())
 	{
