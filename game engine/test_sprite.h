@@ -1,13 +1,13 @@
 #pragma once
 #include "drawable_game_object.h"
 
-class test_sprite :
+class sprite_object :
 	public drawable_game_object
 {
 public:
-	test_sprite ();
-	test_sprite (sf::Sprite sprite);
-	~test_sprite () override;
+	sprite_object ();
+	sprite_object (sf::Sprite sprite);
+	~sprite_object () override;
 
 	virtual void draw (sf::RenderTarget & target) override;
 	virtual sf::Drawable& get_drawable () override;

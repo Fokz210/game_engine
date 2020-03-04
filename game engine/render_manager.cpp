@@ -1,9 +1,7 @@
 #include "render_manager.h"
 
 render_manager::render_manager () :
-	objects_ (),
-	lighting_ (),
-	opaques_ (),
+	level_ (),
 	lighting_shader_ (nullptr),
 	loaded_ (false)
 {
@@ -13,21 +11,6 @@ render_manager::~render_manager ()
 {
 	if (loaded_ && lighting_shader_)
 		delete lighting_shader_;
-}
-
-render_manager::objects_array& render_manager::get_objects_array ()
-{
-	return objects_;
-}
-
-render_manager::lights_array& render_manager::get_lights_array ()
-{
-	return lighting_;
-}
-
-render_manager:: opaques_array& render_manager::get_opaques_array ()
-{
-	return opaques_;
 }
 
 void render_manager::set_shader (sf::Shader * shader)
@@ -49,9 +32,9 @@ void render_manager::render (sf::RenderTarget& target)
 
 	sf::Glsl::Vec2 bounds[bounds_size] = {};
 
-	for (int i = 0; i < opaques_.size (); i++)
+	for (int i = 0; i < level_.walls_.size (); i++)
 	{
-		sf::FloatRect rect = opaques_[i]->get_bounds ();
+		sf::FloatRect rect = level_.walls_[i]->get_bounds ();
 
 		bounds[i * 4] = sf::Glsl::Vec2 (rect.left, rect.top);
 		bounds[i * 4 + 1] = sf::Glsl::Vec2 (rect.left + rect.width, rect.top);
@@ -60,13 +43,20 @@ void render_manager::render (sf::RenderTarget& target)
 	};
 
 	lighting_shader_->setUniformArray ("bounds", bounds, bounds_size);
-	lighting_shader_->setUniform ("light", sf::Glsl::Vec3 (lighting_[0]->get_position().x, lighting_[0]->get_position().y, lighting_[0]->get_radius()));
+	lighting_shader_->setUniform ("light", sf::Glsl::Vec3 (level_.lights_[0]->get_position().x, level_.lights_[0]->get_position().y, level_.lights_[0]->get_radius()));
 
-	lighting_shader_->setUniform ("bounds_size", int (opaques_.size()));
+	lighting_shader_->setUniform ("bounds_size", int (level_.walls_.size()));
 
 	lighting_shader_->setUniform ("current", sf::Shader::CurrentTexture);
 
-	for (auto&& el : objects_)
+	for (auto&& el : level_.sprites_)
+	{
+		lighting_shader_->setUniform ("offset", el->get_offset ());
+		lighting_shader_->setUniform ("tex_size", el->get_size ());
+		target.draw (el->get_drawable (), lighting_shader_);
+	}
+
+	for (auto && el : level_.walls_)
 	{
 		lighting_shader_->setUniform ("offset", el->get_offset ());
 		lighting_shader_->setUniform ("tex_size", el->get_size ());
