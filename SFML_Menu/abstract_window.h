@@ -13,6 +13,8 @@ public:
 
 	virtual void draw (sf::RenderTarget & target) = 0; //!< draw func
 
+	virtual bool contains (const sf::Vector2f & point) = 0; //!< containing checking func
+
 	// Mouse events handlers
 	virtual bool mouse_move (sf::Event::MouseMoveEvent event) = 0; //!< mouse move event handler virtual func
 	virtual bool mouse_button_pressed (sf::Event::MouseButtonEvent event) = 0; //!< mouse button press event handler virtual func

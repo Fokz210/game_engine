@@ -56,6 +56,16 @@ public:
      */
     virtual void draw (sf::RenderTarget & target) override;
 
+    /**
+     * @brief contain checking function for rect
+     *
+     * This function is checking if the rectangle  of the window.
+     *
+     * @param point coordinates of the point to check
+     * @return true if contains
+     */
+    virtual bool contains (const sf::Vector2f & point) override;
+
     // Mouse events handlers
     virtual bool mouse_move (sf::Event::MouseMoveEvent event) override; //!< mouse move event handler overload
     virtual bool mouse_button_pressed (sf::Event::MouseButtonEvent event) override; //!< mouse button press event handler overload

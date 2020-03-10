@@ -37,6 +37,11 @@ void rectangular_window::draw (sf::RenderTarget & target)
 	target.draw (shape_);
 }
 
+bool rectangular_window::contains (const sf::Vector2f & point)
+{
+	return shape_.getGlobalBounds().contains (point);
+}
+
 bool rectangular_window::mouse_move (sf::Event::MouseMoveEvent event)
 {
 	return false;

@@ -1,7 +1,6 @@
 #pragma once
 #include "rectangular_window.h"
 
-
 /**
  * @brief a button with a text on it.
  *
@@ -69,7 +68,7 @@ public:
 
 protected:
     sf::Text text_; //!< SFML text class
-    T lambda_; //!< lambda variable
+    T lambda_;      //!< lambda variable
 };
 
 template<class T>

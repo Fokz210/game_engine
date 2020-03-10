@@ -30,6 +30,12 @@
     <ClInclude Include="rectangular_window.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="text_button.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="window_manager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="SFML_Menu.cpp">
@@ -42,6 +48,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="rectangular_window.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="window_manager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
