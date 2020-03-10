@@ -1,0 +1,67 @@
+\hypertarget{classabstract__window}{}\doxysection{Класс abstract\+\_\+window}
+\label{classabstract__window}\index{abstract\_window@{abstract\_window}}
+
+
+Abstract class for window.  
+
+
+
+
+{\ttfamily \#include $<$abstract\+\_\+window.\+h$>$}
+
+Граф наследования\+:abstract\+\_\+window\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classabstract__window}
+\end{center}
+\end{figure}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classabstract__window_ab3c32ac8fe612b34e4fe6b6facc5ae9a}\label{classabstract__window_ab3c32ac8fe612b34e4fe6b6facc5ae9a}} 
+\mbox{\hyperlink{classabstract__window_ab3c32ac8fe612b34e4fe6b6facc5ae9a}{abstract\+\_\+window}} ()
+\begin{DoxyCompactList}\small\item\em constructor \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classabstract__window_a6b8c27058836bfaef7fa9505001c7e0a}\label{classabstract__window_a6b8c27058836bfaef7fa9505001c7e0a}} 
+virtual void \mbox{\hyperlink{classabstract__window_a6b8c27058836bfaef7fa9505001c7e0a}{draw}} (sf\+::\+Render\+Target \&target)=0
+\begin{DoxyCompactList}\small\item\em draw func \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classabstract__window_a456769c4e960208f969ff409e19a1bda}\label{classabstract__window_a456769c4e960208f969ff409e19a1bda}} 
+virtual bool \mbox{\hyperlink{classabstract__window_a456769c4e960208f969ff409e19a1bda}{mouse\+\_\+move}} (sf\+::\+Event\+::\+Mouse\+Move\+Event event)=0
+\begin{DoxyCompactList}\small\item\em mouse move event handler virtual func \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classabstract__window_a55d9e1b9bbd48bd78b0adb764f7d4075}\label{classabstract__window_a55d9e1b9bbd48bd78b0adb764f7d4075}} 
+virtual bool \mbox{\hyperlink{classabstract__window_a55d9e1b9bbd48bd78b0adb764f7d4075}{mouse\+\_\+button\+\_\+pressed}} (sf\+::\+Event\+::\+Mouse\+Button\+Event event)=0
+\begin{DoxyCompactList}\small\item\em mouse button press event handler virtual func \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classabstract__window_a25bea7f0f2a97e7ad83a1b8cebe8b20c}\label{classabstract__window_a25bea7f0f2a97e7ad83a1b8cebe8b20c}} 
+virtual bool \mbox{\hyperlink{classabstract__window_a25bea7f0f2a97e7ad83a1b8cebe8b20c}{mouse\+\_\+button\+\_\+released}} (sf\+::\+Event\+::\+Mouse\+Button\+Event event)=0
+\begin{DoxyCompactList}\small\item\em mouse button release event handler virtual func \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classabstract__window_a7f05087736a87cc120a6c76991c17ad5}\label{classabstract__window_a7f05087736a87cc120a6c76991c17ad5}} 
+virtual bool \mbox{\hyperlink{classabstract__window_a7f05087736a87cc120a6c76991c17ad5}{keyboard\+\_\+key\+\_\+pressed}} (sf\+::\+Event\+::\+Key\+Event event)=0
+\begin{DoxyCompactList}\small\item\em keyboard key press event handler virtual func \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classabstract__window_ae6990fb02761dab13cc9abbd4a7b44bf}\label{classabstract__window_ae6990fb02761dab13cc9abbd4a7b44bf}} 
+virtual bool \mbox{\hyperlink{classabstract__window_ae6990fb02761dab13cc9abbd4a7b44bf}{keyboard\+\_\+key\+\_\+released}} (sf\+::\+Event\+::\+Key\+Event event)=0
+\begin{DoxyCompactList}\small\item\em keyboard key release event handler virtual func \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classabstract__window_ae1a7dfcc86b089b975ba65ee29c5fbdb}\label{classabstract__window_ae1a7dfcc86b089b975ba65ee29c5fbdb}} 
+virtual bool \mbox{\hyperlink{classabstract__window_ae1a7dfcc86b089b975ba65ee29c5fbdb}{keyboard\+\_\+text\+\_\+entered}} (sf\+::\+Event\+::\+Key\+Event event)=0
+\begin{DoxyCompactList}\small\item\em keyboard text entered event handler virtual func \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classabstract__window_ab6be6037b1f11fe3c76ac71d21e206bc}\label{classabstract__window_ab6be6037b1f11fe3c76ac71d21e206bc}} 
+virtual void \mbox{\hyperlink{classabstract__window_ab6be6037b1f11fe3c76ac71d21e206bc}{activate}} ()
+\begin{DoxyCompactList}\small\item\em window activation handler \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classabstract__window_a49e524841cedd009e4ba4637fe708f1f}\label{classabstract__window_a49e524841cedd009e4ba4637fe708f1f}} 
+virtual void \mbox{\hyperlink{classabstract__window_a49e524841cedd009e4ba4637fe708f1f}{deactivate}} ()
+\begin{DoxyCompactList}\small\item\em window deactivation handler \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Защищенные данные}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classabstract__window_ac230c5474b3797ae608bb9f760db85bc}\label{classabstract__window_ac230c5474b3797ae608bb9f760db85bc}} 
+bool \mbox{\hyperlink{classabstract__window_ac230c5474b3797ae608bb9f760db85bc}{active\+\_\+}}
+\begin{DoxyCompactList}\small\item\em window state indicator \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Abstract class for window. 
+
+Сlass for window with all virtual events methods and draw function. 
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+abstract\+\_\+window.\+h\item 
+abstract\+\_\+window.\+cpp\end{DoxyCompactItemize}
