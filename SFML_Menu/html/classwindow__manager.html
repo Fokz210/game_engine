@@ -1,0 +1,264 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SFML Menu Library: Класс window_manager</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SFML Menu Library
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pro-attribs">Защищенные данные</a> &#124;
+<a href="classwindow__manager-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс window_manager</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>manager for all windows  
+ <a href="classwindow__manager.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="window__manager_8h_source.html">window_manager.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:ad46c8dfde01a6000d7095ae76ee7d381"><td class="memItemLeft" align="right" valign="top"><a id="ad46c8dfde01a6000d7095ae76ee7d381"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwindow__manager.html#ad46c8dfde01a6000d7095ae76ee7d381">window_manager</a> ()</td></tr>
+<tr class="memdesc:ad46c8dfde01a6000d7095ae76ee7d381"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor <br /></td></tr>
+<tr class="separator:ad46c8dfde01a6000d7095ae76ee7d381"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa89a2de713bd9e5ec3713c120386ba34"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwindow__manager.html#aa89a2de713bd9e5ec3713c120386ba34">window_manager</a> (std::vector&lt; <a class="el" href="classabstract__window.html">abstract_window</a> * &gt; windows)</td></tr>
+<tr class="memdesc:aa89a2de713bd9e5ec3713c120386ba34"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor with already initialized array of <a class="el" href="classabstract__window.html" title="Abstract class for window.">abstract_window</a> class pointers  <a href="classwindow__manager.html#aa89a2de713bd9e5ec3713c120386ba34">Подробнее...</a><br /></td></tr>
+<tr class="separator:aa89a2de713bd9e5ec3713c120386ba34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6cbb378e216c745242e66f0e7cd2aa2"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classabstract__window.html">abstract_window</a> * &gt;::iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwindow__manager.html#ab6cbb378e216c745242e66f0e7cd2aa2">add_window</a> (<a class="el" href="classabstract__window.html">abstract_window</a> *window)</td></tr>
+<tr class="memdesc:ab6cbb378e216c745242e66f0e7cd2aa2"><td class="mdescLeft">&#160;</td><td class="mdescRight">pushing window ptr to the array.  <a href="classwindow__manager.html#ab6cbb378e216c745242e66f0e7cd2aa2">Подробнее...</a><br /></td></tr>
+<tr class="separator:ab6cbb378e216c745242e66f0e7cd2aa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a134c6fdb2c34f4295e2875b3f5c30d77"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwindow__manager.html#a134c6fdb2c34f4295e2875b3f5c30d77">remove_window</a> (std::vector&lt; <a class="el" href="classabstract__window.html">abstract_window</a> * &gt;::iterator iterator)</td></tr>
+<tr class="memdesc:a134c6fdb2c34f4295e2875b3f5c30d77"><td class="mdescLeft">&#160;</td><td class="mdescRight">removing window ptr from the array  <a href="classwindow__manager.html#a134c6fdb2c34f4295e2875b3f5c30d77">Подробнее...</a><br /></td></tr>
+<tr class="separator:a134c6fdb2c34f4295e2875b3f5c30d77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a0d4416aa44e82a906c94257c93d9e6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwindow__manager.html#a4a0d4416aa44e82a906c94257c93d9e6">draw_windows</a> (sf::RenderTarget &amp;target)</td></tr>
+<tr class="memdesc:a4a0d4416aa44e82a906c94257c93d9e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">render function  <a href="classwindow__manager.html#a4a0d4416aa44e82a906c94257c93d9e6">Подробнее...</a><br /></td></tr>
+<tr class="separator:a4a0d4416aa44e82a906c94257c93d9e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a522155e85bdca9e32a14391c8ecc57bc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwindow__manager.html#a522155e85bdca9e32a14391c8ecc57bc">handle_event</a> (const sf::Event &amp;event)</td></tr>
+<tr class="memdesc:a522155e85bdca9e32a14391c8ecc57bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">event handling function  <a href="classwindow__manager.html#a522155e85bdca9e32a14391c8ecc57bc">Подробнее...</a><br /></td></tr>
+<tr class="separator:a522155e85bdca9e32a14391c8ecc57bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Защищенные данные</h2></td></tr>
+<tr class="memitem:a711885b279c2b4b40c687879ddf6f9e7"><td class="memItemLeft" align="right" valign="top"><a id="a711885b279c2b4b40c687879ddf6f9e7"></a>
+std::vector&lt; <a class="el" href="classabstract__window.html">abstract_window</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwindow__manager.html#a711885b279c2b4b40c687879ddf6f9e7">windows_</a></td></tr>
+<tr class="memdesc:a711885b279c2b4b40c687879ddf6f9e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">array of <a class="el" href="classabstract__window.html" title="Abstract class for window.">abstract_window</a> class pointers <br /></td></tr>
+<tr class="separator:a711885b279c2b4b40c687879ddf6f9e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1821e9789575adeca2cda12817d68ae"><td class="memItemLeft" align="right" valign="top"><a id="ad1821e9789575adeca2cda12817d68ae"></a>
+<a class="el" href="classabstract__window.html">abstract_window</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwindow__manager.html#ad1821e9789575adeca2cda12817d68ae">active_</a></td></tr>
+<tr class="memdesc:ad1821e9789575adeca2cda12817d68ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">focused window pointer <br /></td></tr>
+<tr class="separator:ad1821e9789575adeca2cda12817d68ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>manager for all windows </p>
+<p>This class is created for managing windows, drawing them and handling events. </p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="aa89a2de713bd9e5ec3713c120386ba34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa89a2de713bd9e5ec3713c120386ba34">&#9670;&nbsp;</a></span>window_manager()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">window_manager::window_manager </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="classabstract__window.html">abstract_window</a> * &gt;&#160;</td>
+          <td class="paramname"><em>windows</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>constructor with already initialized array of <a class="el" href="classabstract__window.html" title="Abstract class for window.">abstract_window</a> class pointers </p>
+<p>Absolutly useless if windows pointer array is empty.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">windows</td><td>array with loaded window ptrs </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="ab6cbb378e216c745242e66f0e7cd2aa2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6cbb378e216c745242e66f0e7cd2aa2">&#9670;&nbsp;</a></span>add_window()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="classabstract__window.html">abstract_window</a> * &gt;::iterator window_manager::add_window </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classabstract__window.html">abstract_window</a> *&#160;</td>
+          <td class="paramname"><em>window</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>pushing window ptr to the array. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">window</td><td>pointer to the window class </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>vector iterator to your pointer. Save it to be able to remove this pointer in the future (see remove_window)</dd></dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="classwindow__manager.html#a134c6fdb2c34f4295e2875b3f5c30d77" title="removing window ptr from the array">remove_window</a> </dd></dl>
+
+</div>
+</div>
+<a id="a4a0d4416aa44e82a906c94257c93d9e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a0d4416aa44e82a906c94257c93d9e6">&#9670;&nbsp;</a></span>draw_windows()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void window_manager::draw_windows </td>
+          <td>(</td>
+          <td class="paramtype">sf::RenderTarget &amp;&#160;</td>
+          <td class="paramname"><em>target</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>render function </p>
+<p>This function is rendering all of your windows. Expected to be used once per iteration. Function does not clear the canvas!!!</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">target</td><td>reference to the window or other render target. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a522155e85bdca9e32a14391c8ecc57bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a522155e85bdca9e32a14391c8ecc57bc">&#9670;&nbsp;</a></span>handle_event()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool window_manager::handle_event </td>
+          <td>(</td>
+          <td class="paramtype">const sf::Event &amp;&#160;</td>
+          <td class="paramname"><em>event</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>event handling function </p>
+<p>This function handles one event, translating this event for all event handling window members. Expected to be used int the event poll cycle (after handling system events).</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">event</td><td>an event you want to handle. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a134c6fdb2c34f4295e2875b3f5c30d77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a134c6fdb2c34f4295e2875b3f5c30d77">&#9670;&nbsp;</a></span>remove_window()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void window_manager::remove_window </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="classabstract__window.html">abstract_window</a> * &gt;::iterator&#160;</td>
+          <td class="paramname"><em>iterator</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>removing window ptr from the array </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">iterator</td><td>vector iterator for the array member you want to remove.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="classwindow__manager.html#ab6cbb378e216c745242e66f0e7cd2aa2" title="pushing window ptr to the array.">add_window</a> </dd></dl>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li><a class="el" href="window__manager_8h_source.html">window_manager.h</a></li>
+<li>window_manager.cpp</li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

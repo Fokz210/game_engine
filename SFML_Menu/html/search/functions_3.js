@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['keyboard_5fkey_5fpressed_29',['keyboard_key_pressed',['../classabstract__window.html#a7f05087736a87cc120a6c76991c17ad5',1,'abstract_window::keyboard_key_pressed()'],['../classrectangular__window.html#a10086959d5b976cea21e13a8f2a6d893',1,'rectangular_window::keyboard_key_pressed()']]],
-  ['keyboard_5fkey_5freleased_30',['keyboard_key_released',['../classabstract__window.html#ae6990fb02761dab13cc9abbd4a7b44bf',1,'abstract_window::keyboard_key_released()'],['../classrectangular__window.html#a7d8973ac547886f52a20780d0b6a743b',1,'rectangular_window::keyboard_key_released()']]],
-  ['keyboard_5ftext_5fentered_31',['keyboard_text_entered',['../classabstract__window.html#ae1a7dfcc86b089b975ba65ee29c5fbdb',1,'abstract_window::keyboard_text_entered()'],['../classrectangular__window.html#a41ecad0e966591329474f4fa77ec57d9',1,'rectangular_window::keyboard_text_entered()']]]
+  ['get_5fshape_38',['get_shape',['../classrectangular__window.html#a9783c23ca748175b7810892eb78dc231',1,'rectangular_window']]],
+  ['get_5ftext_39',['get_text',['../classtext__button.html#ad4192f4bca1f09aa09a065b8282e31dd',1,'text_button']]]
 ];

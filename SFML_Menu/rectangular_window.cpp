@@ -71,3 +71,8 @@ bool rectangular_window::keyboard_text_entered (sf::Event::KeyEvent event)
 {
 	return false;
 }
+
+cursor rectangular_window::get_cursor ()
+{
+	return cursor (cursor::NORMAL);
+}

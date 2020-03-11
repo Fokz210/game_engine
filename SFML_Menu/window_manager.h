@@ -25,7 +25,9 @@ public:
      * @brief pushing window ptr to the array.
      *
      * @param window pointer to the window class
-     * @return vector iterator to your pointer. Save it to be able to remove this pointer in the future (@see remove_window)
+     * @return vector iterator to your pointer. Save it to be able to remove this pointer in the future (see remove_window)
+     *
+     * @see remove_window
      */
     std::vector<abstract_window *>::iterator add_window (abstract_window * window);
 
@@ -33,6 +35,8 @@ public:
      * @brief removing window ptr from the array
      * 
      * @param iterator vector iterator for the array member you want to remove.
+     *
+     * @see add_window
      */
     void remove_window (std::vector<abstract_window *>::iterator iterator);
 
@@ -56,8 +60,16 @@ public:
      */
     bool handle_event (const sf::Event & event);
 
+    /**
+     * @brief updates system cursor
+     *
+     * @param event a mouse move event
+     * @param handle a window handle
+     */
+    void update_cursor (const sf::Event::MouseMoveEvent & event, const sf::WindowHandle & handle);
+
 protected:
     std::vector<abstract_window *> windows_; //!< array of abstract_window class pointers
-    abstract_window * active_;
+    abstract_window * active_; //!< focused window pointer
 };
 

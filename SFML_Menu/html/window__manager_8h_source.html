@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SFML Menu Library: Исходный файл window_manager.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SFML Menu Library
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">window_manager.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;abstract_window.h&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="classwindow__manager.html">   10</a></span>&#160;<span class="keyword">class </span><a class="code" href="classwindow__manager.html">window_manager</a></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="classwindow__manager.html#ad46c8dfde01a6000d7095ae76ee7d381">window_manager</a> (); </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="classwindow__manager.html#ad46c8dfde01a6000d7095ae76ee7d381">window_manager</a> (std::vector&lt;abstract_window *&gt; windows);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    std::vector&lt;abstract_window *&gt;::iterator <a class="code" href="classwindow__manager.html#ab6cbb378e216c745242e66f0e7cd2aa2">add_window</a> (<a class="code" href="classabstract__window.html">abstract_window</a> * window);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classwindow__manager.html#a134c6fdb2c34f4295e2875b3f5c30d77">remove_window</a> (std::vector&lt;abstract_window *&gt;::iterator iterator);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classwindow__manager.html#a4a0d4416aa44e82a906c94257c93d9e6">draw_windows</a> (sf::RenderTarget &amp; target);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classwindow__manager.html#a522155e85bdca9e32a14391c8ecc57bc">handle_event</a> (<span class="keyword">const</span> sf::Event &amp; event);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="classwindow__manager.html#a711885b279c2b4b40c687879ddf6f9e7">   64</a></span>&#160;    std::vector&lt;abstract_window *&gt; <a class="code" href="classwindow__manager.html#a711885b279c2b4b40c687879ddf6f9e7">windows_</a>; </div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="classwindow__manager.html#ad1821e9789575adeca2cda12817d68ae">   65</a></span>&#160;    <a class="code" href="classabstract__window.html">abstract_window</a> * <a class="code" href="classwindow__manager.html#ad1821e9789575adeca2cda12817d68ae">active_</a>; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;};</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclasswindow__manager_html_a711885b279c2b4b40c687879ddf6f9e7"><div class="ttname"><a href="classwindow__manager.html#a711885b279c2b4b40c687879ddf6f9e7">window_manager::windows_</a></div><div class="ttdeci">std::vector&lt; abstract_window * &gt; windows_</div><div class="ttdoc">array of abstract_window class pointers</div><div class="ttdef"><b>Definition:</b> window_manager.h:64</div></div>
+<div class="ttc" id="aclasswindow__manager_html_ad1821e9789575adeca2cda12817d68ae"><div class="ttname"><a href="classwindow__manager.html#ad1821e9789575adeca2cda12817d68ae">window_manager::active_</a></div><div class="ttdeci">abstract_window * active_</div><div class="ttdoc">focused window pointer</div><div class="ttdef"><b>Definition:</b> window_manager.h:65</div></div>
+<div class="ttc" id="aclassabstract__window_html"><div class="ttname"><a href="classabstract__window.html">abstract_window</a></div><div class="ttdoc">Abstract class for window.</div><div class="ttdef"><b>Definition:</b> abstract_window.h:9</div></div>
+<div class="ttc" id="aclasswindow__manager_html_a4a0d4416aa44e82a906c94257c93d9e6"><div class="ttname"><a href="classwindow__manager.html#a4a0d4416aa44e82a906c94257c93d9e6">window_manager::draw_windows</a></div><div class="ttdeci">void draw_windows(sf::RenderTarget &amp;target)</div><div class="ttdoc">render function</div><div class="ttdef"><b>Definition:</b> window_manager.cpp:27</div></div>
+<div class="ttc" id="aclasswindow__manager_html_a522155e85bdca9e32a14391c8ecc57bc"><div class="ttname"><a href="classwindow__manager.html#a522155e85bdca9e32a14391c8ecc57bc">window_manager::handle_event</a></div><div class="ttdeci">bool handle_event(const sf::Event &amp;event)</div><div class="ttdoc">event handling function</div><div class="ttdef"><b>Definition:</b> window_manager.cpp:33</div></div>
+<div class="ttc" id="aclasswindow__manager_html_a134c6fdb2c34f4295e2875b3f5c30d77"><div class="ttname"><a href="classwindow__manager.html#a134c6fdb2c34f4295e2875b3f5c30d77">window_manager::remove_window</a></div><div class="ttdeci">void remove_window(std::vector&lt; abstract_window * &gt;::iterator iterator)</div><div class="ttdoc">removing window ptr from the array</div><div class="ttdef"><b>Definition:</b> window_manager.cpp:22</div></div>
+<div class="ttc" id="aclasswindow__manager_html_ad46c8dfde01a6000d7095ae76ee7d381"><div class="ttname"><a href="classwindow__manager.html#ad46c8dfde01a6000d7095ae76ee7d381">window_manager::window_manager</a></div><div class="ttdeci">window_manager()</div><div class="ttdoc">constructor</div><div class="ttdef"><b>Definition:</b> window_manager.cpp:4</div></div>
+<div class="ttc" id="aclasswindow__manager_html_ab6cbb378e216c745242e66f0e7cd2aa2"><div class="ttname"><a href="classwindow__manager.html#ab6cbb378e216c745242e66f0e7cd2aa2">window_manager::add_window</a></div><div class="ttdeci">std::vector&lt; abstract_window * &gt;::iterator add_window(abstract_window *window)</div><div class="ttdoc">pushing window ptr to the array.</div><div class="ttdef"><b>Definition:</b> window_manager.cpp:16</div></div>
+<div class="ttc" id="aclasswindow__manager_html"><div class="ttname"><a href="classwindow__manager.html">window_manager</a></div><div class="ttdoc">manager for all windows</div><div class="ttdef"><b>Definition:</b> window_manager.h:10</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

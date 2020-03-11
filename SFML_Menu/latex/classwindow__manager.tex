@@ -1,0 +1,143 @@
+\hypertarget{classwindow__manager}{}\doxysection{Класс window\+\_\+manager}
+\label{classwindow__manager}\index{window\_manager@{window\_manager}}
+
+
+manager for all windows  
+
+
+
+
+{\ttfamily \#include $<$window\+\_\+manager.\+h$>$}
+
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classwindow__manager_ad46c8dfde01a6000d7095ae76ee7d381}\label{classwindow__manager_ad46c8dfde01a6000d7095ae76ee7d381}} 
+\mbox{\hyperlink{classwindow__manager_ad46c8dfde01a6000d7095ae76ee7d381}{window\+\_\+manager}} ()
+\begin{DoxyCompactList}\small\item\em constructor \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classwindow__manager_aa89a2de713bd9e5ec3713c120386ba34}{window\+\_\+manager}} (std\+::vector$<$ \mbox{\hyperlink{classabstract__window}{abstract\+\_\+window}} $\ast$ $>$ windows)
+\begin{DoxyCompactList}\small\item\em constructor with already initialized array of \mbox{\hyperlink{classabstract__window}{abstract\+\_\+window}} class pointers \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{classabstract__window}{abstract\+\_\+window}} $\ast$ $>$\+::iterator \mbox{\hyperlink{classwindow__manager_ab6cbb378e216c745242e66f0e7cd2aa2}{add\+\_\+window}} (\mbox{\hyperlink{classabstract__window}{abstract\+\_\+window}} $\ast$window)
+\begin{DoxyCompactList}\small\item\em pushing window ptr to the array. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classwindow__manager_a134c6fdb2c34f4295e2875b3f5c30d77}{remove\+\_\+window}} (std\+::vector$<$ \mbox{\hyperlink{classabstract__window}{abstract\+\_\+window}} $\ast$ $>$\+::iterator iterator)
+\begin{DoxyCompactList}\small\item\em removing window ptr from the array \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classwindow__manager_a4a0d4416aa44e82a906c94257c93d9e6}{draw\+\_\+windows}} (sf\+::\+Render\+Target \&target)
+\begin{DoxyCompactList}\small\item\em render function \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classwindow__manager_a522155e85bdca9e32a14391c8ecc57bc}{handle\+\_\+event}} (const sf\+::\+Event \&event)
+\begin{DoxyCompactList}\small\item\em event handling function \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Защищенные данные}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classwindow__manager_a711885b279c2b4b40c687879ddf6f9e7}\label{classwindow__manager_a711885b279c2b4b40c687879ddf6f9e7}} 
+std\+::vector$<$ \mbox{\hyperlink{classabstract__window}{abstract\+\_\+window}} $\ast$ $>$ \mbox{\hyperlink{classwindow__manager_a711885b279c2b4b40c687879ddf6f9e7}{windows\+\_\+}}
+\begin{DoxyCompactList}\small\item\em array of \mbox{\hyperlink{classabstract__window}{abstract\+\_\+window}} class pointers \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwindow__manager_ad1821e9789575adeca2cda12817d68ae}\label{classwindow__manager_ad1821e9789575adeca2cda12817d68ae}} 
+\mbox{\hyperlink{classabstract__window}{abstract\+\_\+window}} $\ast$ \mbox{\hyperlink{classwindow__manager_ad1821e9789575adeca2cda12817d68ae}{active\+\_\+}}
+\begin{DoxyCompactList}\small\item\em focused window pointer \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+manager for all windows 
+
+This class is created for managing windows, drawing them and handling events. 
+
+\doxysubsection{Конструктор(ы)}
+\mbox{\Hypertarget{classwindow__manager_aa89a2de713bd9e5ec3713c120386ba34}\label{classwindow__manager_aa89a2de713bd9e5ec3713c120386ba34}} 
+\index{window\_manager@{window\_manager}!window\_manager@{window\_manager}}
+\index{window\_manager@{window\_manager}!window\_manager@{window\_manager}}
+\doxysubsubsection{\texorpdfstring{window\_manager()}{window\_manager()}}
+{\footnotesize\ttfamily window\+\_\+manager\+::window\+\_\+manager (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classabstract__window}{abstract\+\_\+window}} $\ast$ $>$}]{windows }\end{DoxyParamCaption})}
+
+
+
+constructor with already initialized array of \mbox{\hyperlink{classabstract__window}{abstract\+\_\+window}} class pointers 
+
+Absolutly useless if windows pointer array is empty.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em windows} & array with loaded window ptrs \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classwindow__manager_ab6cbb378e216c745242e66f0e7cd2aa2}\label{classwindow__manager_ab6cbb378e216c745242e66f0e7cd2aa2}} 
+\index{window\_manager@{window\_manager}!add\_window@{add\_window}}
+\index{add\_window@{add\_window}!window\_manager@{window\_manager}}
+\doxysubsubsection{\texorpdfstring{add\_window()}{add\_window()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classabstract__window}{abstract\+\_\+window}} $\ast$ $>$\+::iterator window\+\_\+manager\+::add\+\_\+window (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classabstract__window}{abstract\+\_\+window}} $\ast$}]{window }\end{DoxyParamCaption})}
+
+
+
+pushing window ptr to the array. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em window} & pointer to the window class \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+vector iterator to your pointer. Save it to be able to remove this pointer in the future (see remove\+\_\+window)
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{См. также}
+\mbox{\hyperlink{classwindow__manager_a134c6fdb2c34f4295e2875b3f5c30d77}{remove\+\_\+window}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classwindow__manager_a4a0d4416aa44e82a906c94257c93d9e6}\label{classwindow__manager_a4a0d4416aa44e82a906c94257c93d9e6}} 
+\index{window\_manager@{window\_manager}!draw\_windows@{draw\_windows}}
+\index{draw\_windows@{draw\_windows}!window\_manager@{window\_manager}}
+\doxysubsubsection{\texorpdfstring{draw\_windows()}{draw\_windows()}}
+{\footnotesize\ttfamily void window\+\_\+manager\+::draw\+\_\+windows (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Target \&}]{target }\end{DoxyParamCaption})}
+
+
+
+render function 
+
+This function is rendering all of your windows. Expected to be used once per iteration. Function does not clear the canvas!!!
+
+
+\begin{DoxyParams}{Аргументы}
+{\em target} & reference to the window or other render target. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classwindow__manager_a522155e85bdca9e32a14391c8ecc57bc}\label{classwindow__manager_a522155e85bdca9e32a14391c8ecc57bc}} 
+\index{window\_manager@{window\_manager}!handle\_event@{handle\_event}}
+\index{handle\_event@{handle\_event}!window\_manager@{window\_manager}}
+\doxysubsubsection{\texorpdfstring{handle\_event()}{handle\_event()}}
+{\footnotesize\ttfamily bool window\+\_\+manager\+::handle\+\_\+event (\begin{DoxyParamCaption}\item[{const sf\+::\+Event \&}]{event }\end{DoxyParamCaption})}
+
+
+
+event handling function 
+
+This function handles one event, translating this event for all event handling window members. Expected to be used int the event poll cycle (after handling system events).
+
+
+\begin{DoxyParams}{Аргументы}
+{\em event} & an event you want to handle. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classwindow__manager_a134c6fdb2c34f4295e2875b3f5c30d77}\label{classwindow__manager_a134c6fdb2c34f4295e2875b3f5c30d77}} 
+\index{window\_manager@{window\_manager}!remove\_window@{remove\_window}}
+\index{remove\_window@{remove\_window}!window\_manager@{window\_manager}}
+\doxysubsubsection{\texorpdfstring{remove\_window()}{remove\_window()}}
+{\footnotesize\ttfamily void window\+\_\+manager\+::remove\+\_\+window (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classabstract__window}{abstract\+\_\+window}} $\ast$ $>$\+::iterator}]{iterator }\end{DoxyParamCaption})}
+
+
+
+removing window ptr from the array 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em iterator} & vector iterator for the array member you want to remove.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{См. также}
+\mbox{\hyperlink{classwindow__manager_ab6cbb378e216c745242e66f0e7cd2aa2}{add\+\_\+window}} 
+\end{DoxySeeAlso}
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+window\+\_\+manager.\+h\item 
+window\+\_\+manager.\+cpp\end{DoxyCompactItemize}

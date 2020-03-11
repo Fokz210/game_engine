@@ -31,6 +31,8 @@ void \mbox{\hyperlink{classrectangular__window_ac69bd12745d63d2af4fdf51252f1b8fe
 \begin{DoxyCompactList}\small\item\em setter for shape struct. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{classrectangular__window_a25019e45bada2d6f14135f19864486bd}{draw}} (sf\+::\+Render\+Target \&target) override
 \begin{DoxyCompactList}\small\item\em overload of draw func. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classrectangular__window_a324717bb331c3b1afc367355fbb62007}{contains}} (const sf\+::\+Vector2f \&point) override
+\begin{DoxyCompactList}\small\item\em contain checking function for rect \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classrectangular__window_ae2c90f2928eec6a32f258d17599c6ebc}\label{classrectangular__window_ae2c90f2928eec6a32f258d17599c6ebc}} 
 virtual bool \mbox{\hyperlink{classrectangular__window_ae2c90f2928eec6a32f258d17599c6ebc}{mouse\+\_\+move}} (sf\+::\+Event\+::\+Mouse\+Move\+Event event) override
 \begin{DoxyCompactList}\small\item\em mouse move event handler overload \end{DoxyCompactList}\item 
@@ -104,6 +106,30 @@ constructor.
 
 
 \doxysubsection{Методы}
+\mbox{\Hypertarget{classrectangular__window_a324717bb331c3b1afc367355fbb62007}\label{classrectangular__window_a324717bb331c3b1afc367355fbb62007}} 
+\index{rectangular\_window@{rectangular\_window}!contains@{contains}}
+\index{contains@{contains}!rectangular\_window@{rectangular\_window}}
+\doxysubsubsection{\texorpdfstring{contains()}{contains()}}
+{\footnotesize\ttfamily bool rectangular\+\_\+window\+::contains (\begin{DoxyParamCaption}\item[{const sf\+::\+Vector2f \&}]{point }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+contain checking function for rect 
+
+This function is checking if the rectangle of the window.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em point} & coordinates of the point to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true if contains 
+\end{DoxyReturn}
+
+
+Замещает \mbox{\hyperlink{classabstract__window_aa3bd2f8025937dd4a7f99f849fc6ee37}{abstract\+\_\+window}}.
+
 \mbox{\Hypertarget{classrectangular__window_a25019e45bada2d6f14135f19864486bd}\label{classrectangular__window_a25019e45bada2d6f14135f19864486bd}} 
 \index{rectangular\_window@{rectangular\_window}!draw@{draw}}
 \index{draw@{draw}!rectangular\_window@{rectangular\_window}}

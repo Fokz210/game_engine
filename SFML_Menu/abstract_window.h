@@ -1,5 +1,6 @@
 #pragma once
 #include <SFML/Graphics.hpp>
+#include "cursor_handler.h"
 
 /**
  *  @brief Abstract class for window.
@@ -28,6 +29,8 @@ public:
 	//Other handlers
     virtual void activate (); //!< window activation handler
 	virtual void deactivate (); //!< window deactivation handler
+
+	virtual cursor get_cursor () = 0; //!< getter of window cursor
 
 protected:
 	bool active_; //!< window state indicator

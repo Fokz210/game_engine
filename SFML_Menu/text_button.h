@@ -66,6 +66,8 @@ public:
 
     virtual void draw (sf::RenderTarget & target) override; //!< drawing func
 
+    virtual cursor get_cursor () override; //!< function that returns the cursor, which needed to display on this window
+
 protected:
     sf::Text text_; //!< SFML text class
     T lambda_;      //!< lambda variable
@@ -116,5 +118,11 @@ template<class T>
 inline void text_button<T>::draw (sf::RenderTarget & target)
 {
     rectangular_window::draw (target);
-    target.draw (text_);
+    //target.draw (text_);
+}
+
+template<class T>
+inline cursor text_button<T>::get_cursor ()
+{
+    return cursor (cursor::TYPE::HAND);
 }

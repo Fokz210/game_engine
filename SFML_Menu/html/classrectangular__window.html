@@ -106,6 +106,9 @@ $(function() {
 <tr class="memitem:a25019e45bada2d6f14135f19864486bd"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrectangular__window.html#a25019e45bada2d6f14135f19864486bd">draw</a> (sf::RenderTarget &amp;target) override</td></tr>
 <tr class="memdesc:a25019e45bada2d6f14135f19864486bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">overload of draw func.  <a href="classrectangular__window.html#a25019e45bada2d6f14135f19864486bd">Подробнее...</a><br /></td></tr>
 <tr class="separator:a25019e45bada2d6f14135f19864486bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a324717bb331c3b1afc367355fbb62007"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrectangular__window.html#a324717bb331c3b1afc367355fbb62007">contains</a> (const sf::Vector2f &amp;point) override</td></tr>
+<tr class="memdesc:a324717bb331c3b1afc367355fbb62007"><td class="mdescLeft">&#160;</td><td class="mdescRight">contain checking function for rect  <a href="classrectangular__window.html#a324717bb331c3b1afc367355fbb62007">Подробнее...</a><br /></td></tr>
+<tr class="separator:a324717bb331c3b1afc367355fbb62007"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae2c90f2928eec6a32f258d17599c6ebc"><td class="memItemLeft" align="right" valign="top"><a id="ae2c90f2928eec6a32f258d17599c6ebc"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrectangular__window.html#ae2c90f2928eec6a32f258d17599c6ebc">mouse_move</a> (sf::Event::MouseMoveEvent event) override</td></tr>
 <tr class="memdesc:ae2c90f2928eec6a32f258d17599c6ebc"><td class="mdescLeft">&#160;</td><td class="mdescRight">mouse move event handler overload <br /></td></tr>
@@ -245,6 +248,44 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </div>
 </div>
 <h2 class="groupheader">Методы</h2>
+<a id="a324717bb331c3b1afc367355fbb62007"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a324717bb331c3b1afc367355fbb62007">&#9670;&nbsp;</a></span>contains()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rectangular_window::contains </td>
+          <td>(</td>
+          <td class="paramtype">const sf::Vector2f &amp;&#160;</td>
+          <td class="paramname"><em>point</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>contain checking function for rect </p>
+<p>This function is checking if the rectangle of the window.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">point</td><td>coordinates of the point to check </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true if contains </dd></dl>
+
+<p>Замещает <a class="el" href="classabstract__window.html#aa3bd2f8025937dd4a7f99f849fc6ee37">abstract_window</a>.</p>
+
+</div>
+</div>
 <a id="a25019e45bada2d6f14135f19864486bd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a25019e45bada2d6f14135f19864486bd">&#9670;&nbsp;</a></span>draw()</h2>
 

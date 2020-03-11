@@ -68,87 +68,86 @@ $(function() {
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;rectangular_window.h&quot;</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt; </div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classtext__button.html">   23</a></span>&#160;<span class="keyword">class </span><a class="code" href="classtext__button.html">text_button</a> :</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">public</span> <a class="code" href="classrectangular__window.html">rectangular_window</a></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="classtext__button.html#a21f0e7706cb6284807f89c4e744cfcd0">text_button</a> (<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, <span class="keywordtype">float</span> width, <span class="keywordtype">float</span> height, sf::Color fill_color, sf::Color text_color, sf::String text, sf::Font font, T lambda);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="classtext__button.html#a21f0e7706cb6284807f89c4e744cfcd0">text_button</a> (sf::RectangleShape shape, sf::Text text, T lambda);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    sf::Text &amp; <a class="code" href="classtext__button.html#ad4192f4bca1f09aa09a065b8282e31dd">get_text</a> ();</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classtext__button.html#a2b62627e74f4dc26d05b008e32091216">set_text</a> (<span class="keyword">const</span> sf::Text &amp; text);</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classtext__button.html#a575098afaabacd73a868f79423c67ff5">mouse_button_released</a>(sf::Event::MouseButtonEvent event) <span class="keyword">override</span>; </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classtext__button.html#a48d088928ac5e04a2888f4878c1b9b82">draw</a> (sf::RenderTarget &amp; target) <span class="keyword">override</span>; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="classtext__button.html#a332fd9f608aadd38fa573472a6115ed6">   71</a></span>&#160;    sf::Text <a class="code" href="classtext__button.html#a332fd9f608aadd38fa573472a6115ed6">text_</a>; </div>
-<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="classtext__button.html#abcaddb083e436ebefba0819d7569bb10">   72</a></span>&#160;    T <a class="code" href="classtext__button.html#abcaddb083e436ebefba0819d7569bb10">lambda_</a>; </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;};</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="classtext__button.html#a21f0e7706cb6284807f89c4e744cfcd0">   76</a></span>&#160;<span class="keyword">inline</span> <a class="code" href="classtext__button.html#a21f0e7706cb6284807f89c4e744cfcd0">text_button&lt;T&gt;::text_button</a> (<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, <span class="keywordtype">float</span> width, <span class="keywordtype">float</span> height, sf::Color fill_color, sf::Color text_color, sf::String text, sf::Font font, T lambda) :</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <a class="code" href="classrectangular__window.html">rectangular_window</a> (x, y, width, height, fill_color),</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    text_ (),</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    lambda_ (lambda)</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;{</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <a class="code" href="classtext__button.html#a332fd9f608aadd38fa573472a6115ed6">text_</a>.setString (text);</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <a class="code" href="classtext__button.html#a332fd9f608aadd38fa573472a6115ed6">text_</a>.setFillColor (text_color);</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <a class="code" href="classtext__button.html#a332fd9f608aadd38fa573472a6115ed6">text_</a>.setFont (font);</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <a class="code" href="classtext__button.html#a332fd9f608aadd38fa573472a6115ed6">text_</a>.setOrigin (<a class="code" href="classtext__button.html#a332fd9f608aadd38fa573472a6115ed6">text_</a>.getLocalBounds ().width / 2, <a class="code" href="classtext__button.html#a332fd9f608aadd38fa573472a6115ed6">text_</a>.getLocalBounds ().width / 2);</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <a class="code" href="classtext__button.html#a332fd9f608aadd38fa573472a6115ed6">text_</a>.setPosition (<a class="code" href="classrectangular__window.html#a29d6df5a97dc35ad988d65a8ac418dc0">shape_</a>.getSize ().x + <a class="code" href="classrectangular__window.html#a29d6df5a97dc35ad988d65a8ac418dc0">shape_</a>.getLocalBounds ().width / 2, <a class="code" href="classrectangular__window.html#a29d6df5a97dc35ad988d65a8ac418dc0">shape_</a>.getSize ().y + <a class="code" href="classrectangular__window.html#a29d6df5a97dc35ad988d65a8ac418dc0">shape_</a>.getLocalBounds ().height / 2);</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;}</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="classtext__button.html#a5290b8f7cc86f3058e06a865b95b88cc">   89</a></span>&#160;<span class="keyword">inline</span> <a class="code" href="classtext__button.html#a21f0e7706cb6284807f89c4e744cfcd0">text_button&lt;T&gt;::text_button</a> (sf::RectangleShape shape, sf::Text text, T lambda) :</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <a class="code" href="classrectangular__window.html">rectangular_window</a> (shape),</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    text_ (text),</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    lambda_ (lambda)</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;{</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;}</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="classtext__button.html#ad4192f4bca1f09aa09a065b8282e31dd">   97</a></span>&#160;<span class="keyword">inline</span> sf::Text &amp; <a class="code" href="classtext__button.html#ad4192f4bca1f09aa09a065b8282e31dd">text_button&lt;T&gt;::get_text</a> ()</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;{</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordflow">return</span> text_;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;}</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="classtext__button.html#a2b62627e74f4dc26d05b008e32091216">  103</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classtext__button.html#a2b62627e74f4dc26d05b008e32091216">text_button&lt;T&gt;::set_text</a> (<span class="keyword">const</span> sf::Text &amp; text)</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;{</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    text_ = text;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;}</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="classtext__button.html#a575098afaabacd73a868f79423c67ff5">  109</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classtext__button.html#a575098afaabacd73a868f79423c67ff5">text_button&lt;T&gt;::mouse_button_released</a> (sf::Event::MouseButtonEvent event)</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;{</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    lambda_ ();</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;}</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00117"></a><span class="lineno"><a class="line" href="classtext__button.html#a48d088928ac5e04a2888f4878c1b9b82">  117</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classtext__button.html#a48d088928ac5e04a2888f4878c1b9b82">text_button&lt;T&gt;::draw</a> (sf::RenderTarget &amp; target)</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;{</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <a class="code" href="classrectangular__window.html#a25019e45bada2d6f14135f19864486bd">rectangular_window::draw</a> (target);</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    target.draw (text_);</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;}</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt; </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classtext__button.html">   22</a></span>&#160;<span class="keyword">class </span><a class="code" href="classtext__button.html">text_button</a> :</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">public</span> <a class="code" href="classrectangular__window.html">rectangular_window</a></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="classtext__button.html#a21f0e7706cb6284807f89c4e744cfcd0">text_button</a> (<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, <span class="keywordtype">float</span> width, <span class="keywordtype">float</span> height, sf::Color fill_color, sf::Color text_color, sf::String text, sf::Font font, T lambda);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="classtext__button.html#a21f0e7706cb6284807f89c4e744cfcd0">text_button</a> (sf::RectangleShape shape, sf::Text text, T lambda);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    sf::Text &amp; <a class="code" href="classtext__button.html#ad4192f4bca1f09aa09a065b8282e31dd">get_text</a> ();</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classtext__button.html#a2b62627e74f4dc26d05b008e32091216">set_text</a> (<span class="keyword">const</span> sf::Text &amp; text);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classtext__button.html#a575098afaabacd73a868f79423c67ff5">mouse_button_released</a>(sf::Event::MouseButtonEvent event) <span class="keyword">override</span>; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classtext__button.html#a48d088928ac5e04a2888f4878c1b9b82">draw</a> (sf::RenderTarget &amp; target) <span class="keyword">override</span>; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="classtext__button.html#a332fd9f608aadd38fa573472a6115ed6">   70</a></span>&#160;    sf::Text <a class="code" href="classtext__button.html#a332fd9f608aadd38fa573472a6115ed6">text_</a>; </div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="classtext__button.html#abcaddb083e436ebefba0819d7569bb10">   71</a></span>&#160;    T <a class="code" href="classtext__button.html#abcaddb083e436ebefba0819d7569bb10">lambda_</a>;      </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;};</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="classtext__button.html#a21f0e7706cb6284807f89c4e744cfcd0">   75</a></span>&#160;<span class="keyword">inline</span> <a class="code" href="classtext__button.html#a21f0e7706cb6284807f89c4e744cfcd0">text_button&lt;T&gt;::text_button</a> (<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, <span class="keywordtype">float</span> width, <span class="keywordtype">float</span> height, sf::Color fill_color, sf::Color text_color, sf::String text, sf::Font font, T lambda) :</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <a class="code" href="classrectangular__window.html">rectangular_window</a> (x, y, width, height, fill_color),</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    text_ (),</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    lambda_ (lambda)</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;{</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <a class="code" href="classtext__button.html#a332fd9f608aadd38fa573472a6115ed6">text_</a>.setString (text);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <a class="code" href="classtext__button.html#a332fd9f608aadd38fa573472a6115ed6">text_</a>.setFillColor (text_color);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <a class="code" href="classtext__button.html#a332fd9f608aadd38fa573472a6115ed6">text_</a>.setFont (font);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <a class="code" href="classtext__button.html#a332fd9f608aadd38fa573472a6115ed6">text_</a>.setOrigin (<a class="code" href="classtext__button.html#a332fd9f608aadd38fa573472a6115ed6">text_</a>.getLocalBounds ().width / 2, <a class="code" href="classtext__button.html#a332fd9f608aadd38fa573472a6115ed6">text_</a>.getLocalBounds ().width / 2);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <a class="code" href="classtext__button.html#a332fd9f608aadd38fa573472a6115ed6">text_</a>.setPosition (<a class="code" href="classrectangular__window.html#a29d6df5a97dc35ad988d65a8ac418dc0">shape_</a>.getSize ().x + <a class="code" href="classrectangular__window.html#a29d6df5a97dc35ad988d65a8ac418dc0">shape_</a>.getLocalBounds ().width / 2, <a class="code" href="classrectangular__window.html#a29d6df5a97dc35ad988d65a8ac418dc0">shape_</a>.getSize ().y + <a class="code" href="classrectangular__window.html#a29d6df5a97dc35ad988d65a8ac418dc0">shape_</a>.getLocalBounds ().height / 2);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;}</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="classtext__button.html#a5290b8f7cc86f3058e06a865b95b88cc">   88</a></span>&#160;<span class="keyword">inline</span> <a class="code" href="classtext__button.html#a21f0e7706cb6284807f89c4e744cfcd0">text_button&lt;T&gt;::text_button</a> (sf::RectangleShape shape, sf::Text text, T lambda) :</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <a class="code" href="classrectangular__window.html">rectangular_window</a> (shape),</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    text_ (text),</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    lambda_ (lambda)</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;{</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;}</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="classtext__button.html#ad4192f4bca1f09aa09a065b8282e31dd">   96</a></span>&#160;<span class="keyword">inline</span> sf::Text &amp; <a class="code" href="classtext__button.html#ad4192f4bca1f09aa09a065b8282e31dd">text_button&lt;T&gt;::get_text</a> ()</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;{</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordflow">return</span> text_;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;}</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="classtext__button.html#a2b62627e74f4dc26d05b008e32091216">  102</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classtext__button.html#a2b62627e74f4dc26d05b008e32091216">text_button&lt;T&gt;::set_text</a> (<span class="keyword">const</span> sf::Text &amp; text)</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;{</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    text_ = text;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;}</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="classtext__button.html#a575098afaabacd73a868f79423c67ff5">  108</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classtext__button.html#a575098afaabacd73a868f79423c67ff5">text_button&lt;T&gt;::mouse_button_released</a> (sf::Event::MouseButtonEvent event)</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;{</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    lambda_ ();</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;}</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="classtext__button.html#a48d088928ac5e04a2888f4878c1b9b82">  116</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classtext__button.html#a48d088928ac5e04a2888f4878c1b9b82">text_button&lt;T&gt;::draw</a> (sf::RenderTarget &amp; target)</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;{</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <a class="code" href="classrectangular__window.html#a25019e45bada2d6f14135f19864486bd">rectangular_window::draw</a> (target);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="comment">//target.draw (text_);</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclasstext__button_html_a575098afaabacd73a868f79423c67ff5"><div class="ttname"><a href="classtext__button.html#a575098afaabacd73a868f79423c67ff5">text_button::mouse_button_released</a></div><div class="ttdeci">virtual bool mouse_button_released(sf::Event::MouseButtonEvent event) override</div><div class="ttdoc">mouse button press event handler virtual func</div><div class="ttdef"><b>Definition:</b> text_button.h:109</div></div>
-<div class="ttc" id="aclasstext__button_html_a332fd9f608aadd38fa573472a6115ed6"><div class="ttname"><a href="classtext__button.html#a332fd9f608aadd38fa573472a6115ed6">text_button::text_</a></div><div class="ttdeci">sf::Text text_</div><div class="ttdoc">SFML text class.</div><div class="ttdef"><b>Definition:</b> text_button.h:71</div></div>
+<div class="ttc" id="aclasstext__button_html_a575098afaabacd73a868f79423c67ff5"><div class="ttname"><a href="classtext__button.html#a575098afaabacd73a868f79423c67ff5">text_button::mouse_button_released</a></div><div class="ttdeci">virtual bool mouse_button_released(sf::Event::MouseButtonEvent event) override</div><div class="ttdoc">mouse button press event handler virtual func</div><div class="ttdef"><b>Definition:</b> text_button.h:108</div></div>
+<div class="ttc" id="aclasstext__button_html_a332fd9f608aadd38fa573472a6115ed6"><div class="ttname"><a href="classtext__button.html#a332fd9f608aadd38fa573472a6115ed6">text_button::text_</a></div><div class="ttdeci">sf::Text text_</div><div class="ttdoc">SFML text class.</div><div class="ttdef"><b>Definition:</b> text_button.h:70</div></div>
 <div class="ttc" id="aclassrectangular__window_html_a25019e45bada2d6f14135f19864486bd"><div class="ttname"><a href="classrectangular__window.html#a25019e45bada2d6f14135f19864486bd">rectangular_window::draw</a></div><div class="ttdeci">virtual void draw(sf::RenderTarget &amp;target) override</div><div class="ttdoc">overload of draw func.</div><div class="ttdef"><b>Definition:</b> rectangular_window.cpp:35</div></div>
-<div class="ttc" id="aclassrectangular__window_html_a29d6df5a97dc35ad988d65a8ac418dc0"><div class="ttname"><a href="classrectangular__window.html#a29d6df5a97dc35ad988d65a8ac418dc0">rectangular_window::shape_</a></div><div class="ttdeci">sf::RectangleShape shape_</div><div class="ttdoc">an SFML rectangle shape struct</div><div class="ttdef"><b>Definition:</b> rectangular_window.h:70</div></div>
-<div class="ttc" id="aclasstext__button_html_ad4192f4bca1f09aa09a065b8282e31dd"><div class="ttname"><a href="classtext__button.html#ad4192f4bca1f09aa09a065b8282e31dd">text_button::get_text</a></div><div class="ttdeci">sf::Text &amp; get_text()</div><div class="ttdoc">text struct getter</div><div class="ttdef"><b>Definition:</b> text_button.h:97</div></div>
-<div class="ttc" id="aclasstext__button_html_abcaddb083e436ebefba0819d7569bb10"><div class="ttname"><a href="classtext__button.html#abcaddb083e436ebefba0819d7569bb10">text_button::lambda_</a></div><div class="ttdeci">T lambda_</div><div class="ttdoc">lambda variable</div><div class="ttdef"><b>Definition:</b> text_button.h:72</div></div>
-<div class="ttc" id="aclasstext__button_html"><div class="ttname"><a href="classtext__button.html">text_button</a></div><div class="ttdoc">a button with a text on it.</div><div class="ttdef"><b>Definition:</b> text_button.h:23</div></div>
-<div class="ttc" id="aclasstext__button_html_a48d088928ac5e04a2888f4878c1b9b82"><div class="ttname"><a href="classtext__button.html#a48d088928ac5e04a2888f4878c1b9b82">text_button::draw</a></div><div class="ttdeci">virtual void draw(sf::RenderTarget &amp;target) override</div><div class="ttdoc">drawing func</div><div class="ttdef"><b>Definition:</b> text_button.h:117</div></div>
-<div class="ttc" id="aclasstext__button_html_a2b62627e74f4dc26d05b008e32091216"><div class="ttname"><a href="classtext__button.html#a2b62627e74f4dc26d05b008e32091216">text_button::set_text</a></div><div class="ttdeci">void set_text(const sf::Text &amp;text)</div><div class="ttdoc">text struct setter</div><div class="ttdef"><b>Definition:</b> text_button.h:103</div></div>
-<div class="ttc" id="aclasstext__button_html_a21f0e7706cb6284807f89c4e744cfcd0"><div class="ttname"><a href="classtext__button.html#a21f0e7706cb6284807f89c4e744cfcd0">text_button::text_button</a></div><div class="ttdeci">text_button(float x, float y, float width, float height, sf::Color fill_color, sf::Color text_color, sf::String text, sf::Font font, T lambda)</div><div class="ttdoc">constructor for button</div><div class="ttdef"><b>Definition:</b> text_button.h:76</div></div>
+<div class="ttc" id="aclassrectangular__window_html_a29d6df5a97dc35ad988d65a8ac418dc0"><div class="ttname"><a href="classrectangular__window.html#a29d6df5a97dc35ad988d65a8ac418dc0">rectangular_window::shape_</a></div><div class="ttdeci">sf::RectangleShape shape_</div><div class="ttdoc">an SFML rectangle shape struct</div><div class="ttdef"><b>Definition:</b> rectangular_window.h:80</div></div>
+<div class="ttc" id="aclasstext__button_html_ad4192f4bca1f09aa09a065b8282e31dd"><div class="ttname"><a href="classtext__button.html#ad4192f4bca1f09aa09a065b8282e31dd">text_button::get_text</a></div><div class="ttdeci">sf::Text &amp; get_text()</div><div class="ttdoc">text struct getter</div><div class="ttdef"><b>Definition:</b> text_button.h:96</div></div>
+<div class="ttc" id="aclasstext__button_html_abcaddb083e436ebefba0819d7569bb10"><div class="ttname"><a href="classtext__button.html#abcaddb083e436ebefba0819d7569bb10">text_button::lambda_</a></div><div class="ttdeci">T lambda_</div><div class="ttdoc">lambda variable</div><div class="ttdef"><b>Definition:</b> text_button.h:71</div></div>
+<div class="ttc" id="aclasstext__button_html"><div class="ttname"><a href="classtext__button.html">text_button</a></div><div class="ttdoc">a button with a text on it.</div><div class="ttdef"><b>Definition:</b> text_button.h:22</div></div>
+<div class="ttc" id="aclasstext__button_html_a48d088928ac5e04a2888f4878c1b9b82"><div class="ttname"><a href="classtext__button.html#a48d088928ac5e04a2888f4878c1b9b82">text_button::draw</a></div><div class="ttdeci">virtual void draw(sf::RenderTarget &amp;target) override</div><div class="ttdoc">drawing func</div><div class="ttdef"><b>Definition:</b> text_button.h:116</div></div>
+<div class="ttc" id="aclasstext__button_html_a2b62627e74f4dc26d05b008e32091216"><div class="ttname"><a href="classtext__button.html#a2b62627e74f4dc26d05b008e32091216">text_button::set_text</a></div><div class="ttdeci">void set_text(const sf::Text &amp;text)</div><div class="ttdoc">text struct setter</div><div class="ttdef"><b>Definition:</b> text_button.h:102</div></div>
+<div class="ttc" id="aclasstext__button_html_a21f0e7706cb6284807f89c4e744cfcd0"><div class="ttname"><a href="classtext__button.html#a21f0e7706cb6284807f89c4e744cfcd0">text_button::text_button</a></div><div class="ttdeci">text_button(float x, float y, float width, float height, sf::Color fill_color, sf::Color text_color, sf::String text, sf::Font font, T lambda)</div><div class="ttdoc">constructor for button</div><div class="ttdef"><b>Definition:</b> text_button.h:75</div></div>
 <div class="ttc" id="aclassrectangular__window_html"><div class="ttname"><a href="classrectangular__window.html">rectangular_window</a></div><div class="ttdoc">A window, based on rectangular shape.</div><div class="ttdef"><b>Definition:</b> rectangular_window.h:9</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

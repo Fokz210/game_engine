@@ -83,3 +83,13 @@ bool window_manager::handle_event (const sf::Event & event)
 		return false;
 	}
 }
+
+void window_manager::update_cursor (const sf::Event::MouseMoveEvent & event, const sf::WindowHandle & handle)
+{
+	cursor normal (cursor::NORMAL);
+	normal.Set (handle);
+
+	for (auto && el : windows_)
+		if (el->contains (sf::Vector2f (event.x, event.y)))
+			el->get_cursor ().Set (handle);
+}
