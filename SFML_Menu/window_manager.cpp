@@ -53,6 +53,9 @@ bool window_manager::handle_event (const sf::Event & event)
 					el->activate ();
 					return true;
 				}
+		if (!active_)
+			return false;
+
 		active_->deactivate ();
 		active_ = nullptr;
 		return false;

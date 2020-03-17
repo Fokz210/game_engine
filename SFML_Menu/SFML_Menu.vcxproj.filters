@@ -39,6 +39,12 @@
     <ClInclude Include="cursor_handler.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="sprite_window.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sprite_button.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="SFML_Menu.cpp">
@@ -57,6 +63,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="cursor_handler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sprite_window.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sprite_button.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

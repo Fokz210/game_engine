@@ -153,6 +153,8 @@
     <ClInclude Include="Menu.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="rectangular_window.h" />
+    <ClInclude Include="sprite_button.h" />
+    <ClInclude Include="sprite_window.h" />
     <ClInclude Include="text_button.h" />
     <ClInclude Include="window_manager.h" />
   </ItemGroup>
@@ -167,6 +169,8 @@
     </ClCompile>
     <ClCompile Include="rectangular_window.cpp" />
     <ClCompile Include="SFML_Menu.cpp" />
+    <ClCompile Include="sprite_button.cpp" />
+    <ClCompile Include="sprite_window.cpp" />
     <ClCompile Include="window_manager.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
