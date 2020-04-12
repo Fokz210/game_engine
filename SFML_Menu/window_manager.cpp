@@ -39,20 +39,28 @@ bool window_manager::handle_event (const sf::Event & event)
 
 	case sf::Event::MouseButtonPressed:
 		for (auto && el : windows_)
+		{
+			
 			if (el->contains (sf::Vector2f (event.mouseButton.x, event.mouseButton.y)))
 				if (el->mouse_button_pressed (event.mouseButton))
 					return true;
+		}
 		return false;
 
 	case sf::Event::MouseButtonReleased:
 		for (auto && el : windows_)
 			if (el->contains (sf::Vector2f (event.mouseButton.x, event.mouseButton.y)))
+			{
+				if (el->global_mouse_button_released (event.mouseButton))
+					return true;
+
 				if (el->mouse_button_released (event.mouseButton))
 				{
 					active_ = el;
 					el->activate ();
 					return true;
 				}
+			}
 		if (!active_)
 			return false;
 
@@ -62,7 +70,7 @@ bool window_manager::handle_event (const sf::Event & event)
 
 	case sf::Event::MouseMoved:
 		for (auto && el : windows_)
-			if (el->contains (sf::Vector2f (event.mouseButton.x, event.mouseButton.y)))
+			if (el->contains (sf::Vector2f (event.mouseMove.x, event.mouseMove.y)))
 				if (el->mouse_move (event.mouseMove))
 					return true;
 		return false;

@@ -72,6 +72,16 @@ bool rectangular_window::keyboard_text_entered (sf::Event::KeyEvent event)
 	return false;
 }
 
+bool rectangular_window::global_mouse_button_pressed (sf::Event::MouseButtonEvent event)
+{
+	return false;
+}
+
+bool rectangular_window::global_mouse_button_released (sf::Event::MouseButtonEvent event)
+{
+	return false;
+}
+
 cursor rectangular_window::get_cursor ()
 {
 	return cursor (cursor::NORMAL);

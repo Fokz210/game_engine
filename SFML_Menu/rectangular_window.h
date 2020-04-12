@@ -76,6 +76,9 @@ public:
     virtual bool keyboard_key_released (sf::Event::KeyEvent event) override; //!< keyboard key release event handler overload 
     virtual bool keyboard_text_entered (sf::Event::KeyEvent event) override; //!< keyboard text entered event handler overload
 
+    virtual bool global_mouse_button_pressed (sf::Event::MouseButtonEvent event) override; //!< handles button press in windows
+    virtual bool global_mouse_button_released (sf::Event::MouseButtonEvent event) override; //!< handles button releas in windows
+
     virtual cursor get_cursor () override; //!< function that returns the cursor, which needed to display on this window
 
 protected:
