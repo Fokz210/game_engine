@@ -338,3 +338,7 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
+*.json
+*.jpg
+*.exr
+/game engine/tex/chick/Creature_Skin_rmugyqp0_surface_Preview.png

@@ -17,7 +17,7 @@ int main ()
 	render_manager r_manager;
 	r_manager.load_shader ("light.frag");
 
-	level_loader loader ("tex/block.png", "tex/blank.png");
+	level_loader loader ("tex/block.png", "tex/rock/albedo.png", "tex/rock/normal.png");
 
 	loader.load_from_file (r_manager.level_, "level.bin");
 

@@ -7,7 +7,7 @@ wall_sprite::wall_sprite () :
 }
 
 wall_sprite::wall_sprite (sf::Sprite sprite) :
-	sprite_object (sprite),
+	sprite_object (sprite, sf::Texture()),
 	opaque_object ()
 {
 }

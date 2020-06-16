@@ -28,6 +28,9 @@ void render_manager::load_shader (std::string shader_path)
 
 void render_manager::render (sf::RenderTarget& target)
 {
+	static int frame = 0;
+	frame++;
+
 	const int bounds_size = 64;
 
 	sf::Glsl::Vec2 bounds[bounds_size] = {};
@@ -49,8 +52,12 @@ void render_manager::render (sf::RenderTarget& target)
 
 	lighting_shader_->setUniform ("current", sf::Shader::CurrentTexture);
 
+	lighting_shader_->setUniform ("frame", float (frame));
+
 	for (auto&& el : level_.sprites_)
 	{
+		lighting_shader_->setUniform ("normal", el->get_normal ());
+		lighting_shader_->setUniform ("use_normal", true);
 		lighting_shader_->setUniform ("offset", el->get_offset ());
 		lighting_shader_->setUniform ("tex_size", el->get_size ());
 		target.draw (el->get_drawable (), lighting_shader_);
@@ -58,6 +65,7 @@ void render_manager::render (sf::RenderTarget& target)
 
 	for (auto && el : level_.walls_)
 	{
+		lighting_shader_->setUniform ("use_normal", false);
 		lighting_shader_->setUniform ("offset", el->get_offset ());
 		lighting_shader_->setUniform ("tex_size", el->get_size ());
 		target.draw (el->get_drawable (), lighting_shader_);

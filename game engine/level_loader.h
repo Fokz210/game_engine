@@ -30,14 +30,14 @@ public:
 		int size;
 	};
 
-	level_loader (std::string wall_path, std::string sprite_path);
+	level_loader (std::string wall_path, std::string sprite_path, std::string normal_path);
 	~level_loader ();
 
 	void save_to_file (level & source, std::string dest) const;
 	void load_from_file (level & dest, std::string source);
 
 protected:
-	sf::Texture wall_texture_, sprite_texture_;
+	sf::Texture wall_texture_, sprite_texture_, normal_texture_;
 
 	level::lights_array loaded_lights_;
 	level::sprites_array loaded_sprites_;
