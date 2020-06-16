@@ -99,11 +99,16 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <BrowseInformation>true</BrowseInformation>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>SFML_Menu.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -138,10 +143,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\game engine\drawable_game_object.cpp" />
+    <ClCompile Include="..\game engine\game_object.cpp" />
+    <ClCompile Include="..\game engine\level.cpp" />
+    <ClCompile Include="..\game engine\level_loader.cpp" />
+    <ClCompile Include="..\game engine\light_source.cpp" />
+    <ClCompile Include="..\game engine\opaque_object.cpp" />
+    <ClCompile Include="..\game engine\render_manager.cpp" />
+    <ClCompile Include="..\game engine\test_sprite.cpp" />
+    <ClCompile Include="..\game engine\test_wall.cpp" />
     <ClCompile Include="Source.cpp" />
+    <ClCompile Include="wall_object.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\SFML_Menu\Menu.h" />
     <ClInclude Include="level_header.h" />
+    <ClInclude Include="wall_object.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,0 +1,191 @@
+\hypertarget{classrectangular__window}{}\doxysection{Класс rectangular\+\_\+window}
+\label{classrectangular__window}\index{rectangular\_window@{rectangular\_window}}
+
+
+A window, based on rectangular shape.  
+
+
+
+
+{\ttfamily \#include $<$rectangular\+\_\+window.\+h$>$}
+
+Граф наследования\+:rectangular\+\_\+window\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classrectangular__window}
+\end{center}
+\end{figure}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classrectangular__window_abaed59ff95fd408bb3fdae39558c4c7d}\label{classrectangular__window_abaed59ff95fd408bb3fdae39558c4c7d}} 
+\mbox{\hyperlink{classrectangular__window_abaed59ff95fd408bb3fdae39558c4c7d}{rectangular\+\_\+window}} ()
+\begin{DoxyCompactList}\small\item\em basic default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classrectangular__window_a532b62edfdac93a8ccacca5a589c0bd1}{rectangular\+\_\+window}} (const sf\+::\+Rectangle\+Shape \&shape)
+\begin{DoxyCompactList}\small\item\em constructor from shape class \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classrectangular__window_a1f6bbcc49b21355eab3cc42a78d8972b}{rectangular\+\_\+window}} (float x, float y, float width, float height, sf\+::\+Color color)
+\begin{DoxyCompactList}\small\item\em constructor. \end{DoxyCompactList}\item 
+sf\+::\+Rectangle\+Shape \& \mbox{\hyperlink{classrectangular__window_a9783c23ca748175b7810892eb78dc231}{get\+\_\+shape}} ()
+\begin{DoxyCompactList}\small\item\em getter for shape struct. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrectangular__window_ac69bd12745d63d2af4fdf51252f1b8fe}{set\+\_\+shape}} (const sf\+::\+Rectangle\+Shape \&shape)
+\begin{DoxyCompactList}\small\item\em setter for shape struct. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classrectangular__window_a25019e45bada2d6f14135f19864486bd}{draw}} (sf\+::\+Render\+Target \&target) override
+\begin{DoxyCompactList}\small\item\em overload of draw func. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classrectangular__window_a324717bb331c3b1afc367355fbb62007}{contains}} (const sf\+::\+Vector2f \&point) override
+\begin{DoxyCompactList}\small\item\em contain checking function for rect \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classrectangular__window_ae2c90f2928eec6a32f258d17599c6ebc}\label{classrectangular__window_ae2c90f2928eec6a32f258d17599c6ebc}} 
+virtual bool \mbox{\hyperlink{classrectangular__window_ae2c90f2928eec6a32f258d17599c6ebc}{mouse\+\_\+move}} (sf\+::\+Event\+::\+Mouse\+Move\+Event event) override
+\begin{DoxyCompactList}\small\item\em mouse move event handler overload \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classrectangular__window_a3c8bd0a34b7f2e4835f92476d4e6bcdd}\label{classrectangular__window_a3c8bd0a34b7f2e4835f92476d4e6bcdd}} 
+virtual bool \mbox{\hyperlink{classrectangular__window_a3c8bd0a34b7f2e4835f92476d4e6bcdd}{mouse\+\_\+button\+\_\+pressed}} (sf\+::\+Event\+::\+Mouse\+Button\+Event event) override
+\begin{DoxyCompactList}\small\item\em mouse button press event handler overload \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classrectangular__window_aa5387923890b9c1703ae362b5d4f6342}\label{classrectangular__window_aa5387923890b9c1703ae362b5d4f6342}} 
+virtual bool \mbox{\hyperlink{classrectangular__window_aa5387923890b9c1703ae362b5d4f6342}{mouse\+\_\+button\+\_\+released}} (sf\+::\+Event\+::\+Mouse\+Button\+Event event) override
+\begin{DoxyCompactList}\small\item\em mouse button release event handler overload \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classrectangular__window_a10086959d5b976cea21e13a8f2a6d893}\label{classrectangular__window_a10086959d5b976cea21e13a8f2a6d893}} 
+virtual bool \mbox{\hyperlink{classrectangular__window_a10086959d5b976cea21e13a8f2a6d893}{keyboard\+\_\+key\+\_\+pressed}} (sf\+::\+Event\+::\+Key\+Event event) override
+\begin{DoxyCompactList}\small\item\em keyboard key press event handler overload \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classrectangular__window_a7d8973ac547886f52a20780d0b6a743b}\label{classrectangular__window_a7d8973ac547886f52a20780d0b6a743b}} 
+virtual bool \mbox{\hyperlink{classrectangular__window_a7d8973ac547886f52a20780d0b6a743b}{keyboard\+\_\+key\+\_\+released}} (sf\+::\+Event\+::\+Key\+Event event) override
+\begin{DoxyCompactList}\small\item\em keyboard key release event handler overload \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classrectangular__window_a41ecad0e966591329474f4fa77ec57d9}\label{classrectangular__window_a41ecad0e966591329474f4fa77ec57d9}} 
+virtual bool \mbox{\hyperlink{classrectangular__window_a41ecad0e966591329474f4fa77ec57d9}{keyboard\+\_\+text\+\_\+entered}} (sf\+::\+Event\+::\+Key\+Event event) override
+\begin{DoxyCompactList}\small\item\em keyboard text entered event handler overload \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Защищенные данные}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classrectangular__window_a29d6df5a97dc35ad988d65a8ac418dc0}\label{classrectangular__window_a29d6df5a97dc35ad988d65a8ac418dc0}} 
+sf\+::\+Rectangle\+Shape \mbox{\hyperlink{classrectangular__window_a29d6df5a97dc35ad988d65a8ac418dc0}{shape\+\_\+}}
+\begin{DoxyCompactList}\small\item\em an S\+F\+ML rectangle shape struct \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+A window, based on rectangular shape. 
+
+A child of \mbox{\hyperlink{classabstract__window}{abstract\+\_\+window}} class. 
+
+\doxysubsection{Конструктор(ы)}
+\mbox{\Hypertarget{classrectangular__window_a532b62edfdac93a8ccacca5a589c0bd1}\label{classrectangular__window_a532b62edfdac93a8ccacca5a589c0bd1}} 
+\index{rectangular\_window@{rectangular\_window}!rectangular\_window@{rectangular\_window}}
+\index{rectangular\_window@{rectangular\_window}!rectangular\_window@{rectangular\_window}}
+\doxysubsubsection{\texorpdfstring{rectangular\_window()}{rectangular\_window()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily rectangular\+\_\+window\+::rectangular\+\_\+window (\begin{DoxyParamCaption}\item[{const sf\+::\+Rectangle\+Shape \&}]{shape }\end{DoxyParamCaption})}
+
+
+
+constructor from shape class 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em shape} & S\+F\+ML shape class initializer \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classrectangular__window_a1f6bbcc49b21355eab3cc42a78d8972b}\label{classrectangular__window_a1f6bbcc49b21355eab3cc42a78d8972b}} 
+\index{rectangular\_window@{rectangular\_window}!rectangular\_window@{rectangular\_window}}
+\index{rectangular\_window@{rectangular\_window}!rectangular\_window@{rectangular\_window}}
+\doxysubsubsection{\texorpdfstring{rectangular\_window()}{rectangular\_window()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily rectangular\+\_\+window\+::rectangular\+\_\+window (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y,  }\item[{float}]{width,  }\item[{float}]{height,  }\item[{sf\+::\+Color}]{color }\end{DoxyParamCaption})}
+
+
+
+constructor. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em x} & x-\/coord of upper left corner of the window \\
+\hline
+{\em y} & y-\/coord of upper left corner of the window \\
+\hline
+{\em width} & width of the window \\
+\hline
+{\em height} & height of the window \\
+\hline
+{\em color} & the color of the window \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classrectangular__window_a324717bb331c3b1afc367355fbb62007}\label{classrectangular__window_a324717bb331c3b1afc367355fbb62007}} 
+\index{rectangular\_window@{rectangular\_window}!contains@{contains}}
+\index{contains@{contains}!rectangular\_window@{rectangular\_window}}
+\doxysubsubsection{\texorpdfstring{contains()}{contains()}}
+{\footnotesize\ttfamily bool rectangular\+\_\+window\+::contains (\begin{DoxyParamCaption}\item[{const sf\+::\+Vector2f \&}]{point }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+contain checking function for rect 
+
+This function is checking if the rectangle of the window.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em point} & coordinates of the point to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true if contains 
+\end{DoxyReturn}
+
+
+Замещает \mbox{\hyperlink{classabstract__window_aa3bd2f8025937dd4a7f99f849fc6ee37}{abstract\+\_\+window}}.
+
+\mbox{\Hypertarget{classrectangular__window_a25019e45bada2d6f14135f19864486bd}\label{classrectangular__window_a25019e45bada2d6f14135f19864486bd}} 
+\index{rectangular\_window@{rectangular\_window}!draw@{draw}}
+\index{draw@{draw}!rectangular\_window@{rectangular\_window}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void rectangular\+\_\+window\+::draw (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Target \&}]{target }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+overload of draw func. 
+
+Function that draws rectangle shape.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em target} & render target. \\
+\hline
+\end{DoxyParams}
+
+
+Замещает \mbox{\hyperlink{classabstract__window_a6b8c27058836bfaef7fa9505001c7e0a}{abstract\+\_\+window}}.
+
+
+
+Переопределяется в \mbox{\hyperlink{classtext__button_a48d088928ac5e04a2888f4878c1b9b82}{text\+\_\+button$<$ T $>$}}.
+
+\mbox{\Hypertarget{classrectangular__window_a9783c23ca748175b7810892eb78dc231}\label{classrectangular__window_a9783c23ca748175b7810892eb78dc231}} 
+\index{rectangular\_window@{rectangular\_window}!get\_shape@{get\_shape}}
+\index{get\_shape@{get\_shape}!rectangular\_window@{rectangular\_window}}
+\doxysubsubsection{\texorpdfstring{get\_shape()}{get\_shape()}}
+{\footnotesize\ttfamily sf\+::\+Rectangle\+Shape \& rectangular\+\_\+window\+::get\+\_\+shape (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+getter for shape struct. 
+
+\begin{DoxyReturn}{Возвращает}
+The shape ref. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classrectangular__window_ac69bd12745d63d2af4fdf51252f1b8fe}\label{classrectangular__window_ac69bd12745d63d2af4fdf51252f1b8fe}} 
+\index{rectangular\_window@{rectangular\_window}!set\_shape@{set\_shape}}
+\index{set\_shape@{set\_shape}!rectangular\_window@{rectangular\_window}}
+\doxysubsubsection{\texorpdfstring{set\_shape()}{set\_shape()}}
+{\footnotesize\ttfamily void rectangular\+\_\+window\+::set\+\_\+shape (\begin{DoxyParamCaption}\item[{const sf\+::\+Rectangle\+Shape \&}]{shape }\end{DoxyParamCaption})}
+
+
+
+setter for shape struct. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em a} & shape struct to set. \\
+\hline
+\end{DoxyParams}
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+rectangular\+\_\+window.\+h\item 
+rectangular\+\_\+window.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,55 @@
+\hypertarget{classlevel__loader}{}\doxysection{level\+\_\+loader Class Reference}
+\label{classlevel__loader}\index{level\_loader@{level\_loader}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structlevel__loader_1_1level__file__header}{level\+\_\+file\+\_\+header}}
+\item 
+struct \mbox{\hyperlink{structlevel__loader_1_1object__info}{object\+\_\+info}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classlevel__loader_a38a34e4161d5422fe47ba6f0b974cdb5}\label{classlevel__loader_a38a34e4161d5422fe47ba6f0b974cdb5}} 
+enum {\bfseries object\+\_\+type} \{ {\bfseries undefined}, 
+{\bfseries sprite}, 
+{\bfseries light}, 
+{\bfseries wall}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classlevel__loader_aed7a390d42029389aee9c86b2c49babc}\label{classlevel__loader_aed7a390d42029389aee9c86b2c49babc}} 
+{\bfseries level\+\_\+loader} (std\+::string wall\+\_\+path, std\+::string sprite\+\_\+path)
+\item 
+\mbox{\Hypertarget{classlevel__loader_a6a3bad37a4bef96797bf993b2b3b562d}\label{classlevel__loader_a6a3bad37a4bef96797bf993b2b3b562d}} 
+void {\bfseries save\+\_\+to\+\_\+file} (\mbox{\hyperlink{classlevel}{level}} \&source, std\+::string dest) const
+\item 
+\mbox{\Hypertarget{classlevel__loader_a74f80c634b98823f537cd2ee4fd0df71}\label{classlevel__loader_a74f80c634b98823f537cd2ee4fd0df71}} 
+void {\bfseries load\+\_\+from\+\_\+file} (\mbox{\hyperlink{classlevel}{level}} \&dest, std\+::string source)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classlevel__loader_ab50ce5c0e4c88d7ea9b7fbee2c0faa3b}\label{classlevel__loader_ab50ce5c0e4c88d7ea9b7fbee2c0faa3b}} 
+sf\+::\+Texture {\bfseries wall\+\_\+texture\+\_\+}
+\item 
+\mbox{\Hypertarget{classlevel__loader_a3d85bf0ac3ceeb15c02193b2812384e2}\label{classlevel__loader_a3d85bf0ac3ceeb15c02193b2812384e2}} 
+sf\+::\+Texture {\bfseries sprite\+\_\+texture\+\_\+}
+\item 
+\mbox{\Hypertarget{classlevel__loader_a8f91ed2b2ce07fd934d63199c8cfd9f2}\label{classlevel__loader_a8f91ed2b2ce07fd934d63199c8cfd9f2}} 
+level\+::lights\+\_\+array {\bfseries loaded\+\_\+lights\+\_\+}
+\item 
+\mbox{\Hypertarget{classlevel__loader_aebeafa1eecf363d46459d70d6542d9a2}\label{classlevel__loader_aebeafa1eecf363d46459d70d6542d9a2}} 
+level\+::sprites\+\_\+array {\bfseries loaded\+\_\+sprites\+\_\+}
+\item 
+\mbox{\Hypertarget{classlevel__loader_a6ab758a64953a14675f5920e0408d509}\label{classlevel__loader_a6ab758a64953a14675f5920e0408d509}} 
+level\+::walls\+\_\+array {\bfseries loaded\+\_\+walls\+\_\+}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+level\+\_\+loader.\+h\item 
+level\+\_\+loader.\+cpp\end{DoxyCompactItemize}

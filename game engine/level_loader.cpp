@@ -1,9 +1,10 @@
 #include "level_loader.h"
 #include <stdexcept>
 
-level_loader::level_loader (std::string wall_path, std::string sprite_path) :
+level_loader::level_loader (std::string wall_path, std::string sprite_path, std::string normal_path) :
 	wall_texture_ (),
-	sprite_texture_ ()
+	sprite_texture_ (),
+	normal_texture_ ()
 {
 	sf::Image sprite_image;
 	sprite_image.loadFromFile (sprite_path);
@@ -15,8 +16,14 @@ level_loader::level_loader (std::string wall_path, std::string sprite_path) :
 
 	wall_texture_.loadFromImage (wall_image);
 
+	sf::Image normal_image;
+	normal_image.loadFromFile (normal_path);
+
+	normal_texture_.loadFromImage (normal_image);
+
 	sprite_texture_.setRepeated (true);
 	wall_texture_.setRepeated (true);
+	normal_texture_.setRepeated (true);
 }
 
 level_loader::~level_loader ()
@@ -127,7 +134,7 @@ void level_loader::load_from_file (level & dest, std::string source)
 			sprite.setPosition (info[i].x, info[i].y);
 			sprite.setTextureRect (sf::IntRect (0, 0, info[i].width, info[i].height));
 			
-			sprite_object * object = new sprite_object (sprite);
+			sprite_object * object = new sprite_object (sprite, normal_texture_);
 
 			loaded_sprites_.push_back (object);
 			dest.sprites_.push_back (object);

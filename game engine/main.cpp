@@ -1,9 +1,12 @@
+#include <iostream>
 #include <SFML/Graphics.hpp>
 
 #include "render_manager.h"
 #include "test_wall.h"
 
 #include "level_loader.h"
+
+#include "../SFML_Menu/Menu.h"
 
 int main ()
 {
@@ -14,7 +17,7 @@ int main ()
 	render_manager r_manager;
 	r_manager.load_shader ("light.frag");
 
-	level_loader loader ("tex/block.png", "tex/blank.png");
+	level_loader loader ("tex/block.png", "tex/rock/albedo.png", "tex/rock/normal.png");
 
 	loader.load_from_file (r_manager.level_, "level.bin");
 

@@ -6,9 +6,10 @@ sprite_object::sprite_object () :
 {
 }
 
-sprite_object::sprite_object (sf::Sprite sprite)  :
+sprite_object::sprite_object (sf::Sprite sprite, sf::Texture normal)  :
 	drawable_game_object (),
-	sprite_ (sprite)
+	sprite_ (sprite),
+	normal_ (normal)
 {
 }
 
@@ -39,6 +40,11 @@ sf::Sprite& sprite_object::get_sprite ()
 void sprite_object::set_sprite (sf::Sprite& sprite)
 {
 	sprite_ = sprite;
+}
+
+sf::Texture & sprite_object::get_normal ()
+{
+	return normal_;
 }
 
 sf::Vector2f sprite_object::get_size () const

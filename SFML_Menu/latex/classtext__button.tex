@@ -1,0 +1,157 @@
+\hypertarget{classtext__button}{}\doxysection{Шаблон класса text\+\_\+button$<$ T $>$}
+\label{classtext__button}\index{text\_button$<$ T $>$@{text\_button$<$ T $>$}}
+
+
+a button with a text on it.  
+
+
+
+
+{\ttfamily \#include $<$text\+\_\+button.\+h$>$}
+
+Граф наследования\+:text\+\_\+button$<$ T $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classtext__button}
+\end{center}
+\end{figure}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtext__button_a21f0e7706cb6284807f89c4e744cfcd0}{text\+\_\+button}} (float x, float y, float width, float height, sf\+::\+Color fill\+\_\+color, sf\+::\+Color text\+\_\+color, sf\+::\+String text, sf\+::\+Font font, T lambda)
+\begin{DoxyCompactList}\small\item\em constructor for button \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtext__button_a5290b8f7cc86f3058e06a865b95b88cc}{text\+\_\+button}} (sf\+::\+Rectangle\+Shape shape, sf\+::\+Text text, T lambda)
+\begin{DoxyCompactList}\small\item\em simpler constructor \end{DoxyCompactList}\item 
+sf\+::\+Text \& \mbox{\hyperlink{classtext__button_ad4192f4bca1f09aa09a065b8282e31dd}{get\+\_\+text}} ()
+\begin{DoxyCompactList}\small\item\em text struct getter \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtext__button_a2b62627e74f4dc26d05b008e32091216}{set\+\_\+text}} (const sf\+::\+Text \&text)
+\begin{DoxyCompactList}\small\item\em text struct setter \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classtext__button_a575098afaabacd73a868f79423c67ff5}\label{classtext__button_a575098afaabacd73a868f79423c67ff5}} 
+virtual bool \mbox{\hyperlink{classtext__button_a575098afaabacd73a868f79423c67ff5}{mouse\+\_\+button\+\_\+released}} (sf\+::\+Event\+::\+Mouse\+Button\+Event event) override
+\begin{DoxyCompactList}\small\item\em mouse button press event handler virtual func \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classtext__button_a48d088928ac5e04a2888f4878c1b9b82}\label{classtext__button_a48d088928ac5e04a2888f4878c1b9b82}} 
+virtual void \mbox{\hyperlink{classtext__button_a48d088928ac5e04a2888f4878c1b9b82}{draw}} (sf\+::\+Render\+Target \&target) override
+\begin{DoxyCompactList}\small\item\em drawing func \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Защищенные данные}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtext__button_a332fd9f608aadd38fa573472a6115ed6}\label{classtext__button_a332fd9f608aadd38fa573472a6115ed6}} 
+sf\+::\+Text \mbox{\hyperlink{classtext__button_a332fd9f608aadd38fa573472a6115ed6}{text\+\_\+}}
+\begin{DoxyCompactList}\small\item\em S\+F\+ML text class. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classtext__button_abcaddb083e436ebefba0819d7569bb10}\label{classtext__button_abcaddb083e436ebefba0819d7569bb10}} 
+T \mbox{\hyperlink{classtext__button_abcaddb083e436ebefba0819d7569bb10}{lambda\+\_\+}}
+\begin{DoxyCompactList}\small\item\em lambda variable \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+\subsubsection*{template$<$class T$>$\newline
+class text\+\_\+button$<$ T $>$}
+
+a button with a text on it. 
+
+Template type T is used to store the lambda type.
+
+Usage\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{...}
+\DoxyCodeLine{bool param;}
+\DoxyCodeLine{\textcolor{keyword}{auto} lambda = [\&]()}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    param = \textcolor{keyword}{true};}
+\DoxyCodeLine{\};}
+\DoxyCodeLine{rectangular\_button<decltype (lambda)> button (<...>, lambda);}
+\DoxyCodeLine{...}
+\end{DoxyCode}
+ 
+
+\doxysubsection{Конструктор(ы)}
+\mbox{\Hypertarget{classtext__button_a21f0e7706cb6284807f89c4e744cfcd0}\label{classtext__button_a21f0e7706cb6284807f89c4e744cfcd0}} 
+\index{text\_button$<$ T $>$@{text\_button$<$ T $>$}!text\_button@{text\_button}}
+\index{text\_button@{text\_button}!text\_button$<$ T $>$@{text\_button$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{text\_button()}{text\_button()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classtext__button}{text\+\_\+button}}$<$ T $>$\+::\mbox{\hyperlink{classtext__button}{text\+\_\+button}} (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y,  }\item[{float}]{width,  }\item[{float}]{height,  }\item[{sf\+::\+Color}]{fill\+\_\+color,  }\item[{sf\+::\+Color}]{text\+\_\+color,  }\item[{sf\+::\+String}]{text,  }\item[{sf\+::\+Font}]{font,  }\item[{T}]{lambda }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+constructor for button 
+
+Inializes all members.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em x} & x-\/coord of upper left corner \\
+\hline
+{\em y} & x-\/coord of upper left corner \\
+\hline
+{\em width} & width of the button \\
+\hline
+{\em height} & height of the button \\
+\hline
+{\em fill\+\_\+color} & color of the button \\
+\hline
+{\em text\+\_\+color} & color of the text \\
+\hline
+{\em text} & text string \\
+\hline
+{\em font} & text font \\
+\hline
+{\em labmda} & function that runs when button is pressed \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classtext__button_a5290b8f7cc86f3058e06a865b95b88cc}\label{classtext__button_a5290b8f7cc86f3058e06a865b95b88cc}} 
+\index{text\_button$<$ T $>$@{text\_button$<$ T $>$}!text\_button@{text\_button}}
+\index{text\_button@{text\_button}!text\_button$<$ T $>$@{text\_button$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{text\_button()}{text\_button()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classtext__button}{text\+\_\+button}}$<$ T $>$\+::\mbox{\hyperlink{classtext__button}{text\+\_\+button}} (\begin{DoxyParamCaption}\item[{sf\+::\+Rectangle\+Shape}]{shape,  }\item[{sf\+::\+Text}]{text,  }\item[{T}]{lambda }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+simpler constructor 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em shape} & shape S\+F\+ML class \\
+\hline
+{\em text} & text S\+F\+ML class \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classtext__button_ad4192f4bca1f09aa09a065b8282e31dd}\label{classtext__button_ad4192f4bca1f09aa09a065b8282e31dd}} 
+\index{text\_button$<$ T $>$@{text\_button$<$ T $>$}!get\_text@{get\_text}}
+\index{get\_text@{get\_text}!text\_button$<$ T $>$@{text\_button$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{get\_text()}{get\_text()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+sf\+::\+Text \& \mbox{\hyperlink{classtext__button}{text\+\_\+button}}$<$ T $>$\+::get\+\_\+text\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+text struct getter 
+
+\begin{DoxyReturn}{Возвращает}
+text struct 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtext__button_a2b62627e74f4dc26d05b008e32091216}\label{classtext__button_a2b62627e74f4dc26d05b008e32091216}} 
+\index{text\_button$<$ T $>$@{text\_button$<$ T $>$}!set\_text@{set\_text}}
+\index{set\_text@{set\_text}!text\_button$<$ T $>$@{text\_button$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{set\_text()}{set\_text()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classtext__button}{text\+\_\+button}}$<$ T $>$\+::set\+\_\+text (\begin{DoxyParamCaption}\item[{const sf\+::\+Text \&}]{text }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+text struct setter 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em text} & text struct \\
+\hline
+\end{DoxyParams}
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+text\+\_\+button.\+h\end{DoxyCompactItemize}
