@@ -4,6 +4,7 @@
 
 cursor::cursor (const cursor::TYPE t)
 {
+#ifdef MSC_VER_
 	switch (t)
 	{
 	case cursor::WAIT:
@@ -27,6 +28,7 @@ cursor::cursor (const cursor::TYPE t)
 	}
 	break;
 	}
+#endif
 }
 
 void cursor::Set (const sf::WindowHandle & aWindowHandle) const

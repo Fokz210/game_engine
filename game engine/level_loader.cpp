@@ -85,10 +85,10 @@ void level_loader::save_to_file (level & dest, std::string source) const
 	}
 
 	FILE * file;
-	fopen_s (&file, source.c_str (), "wb");
+	file = fopen (source.c_str (), "wb");
 
 	if (!file)
-		throw std::exception ("failed to open file");
+		throw std::runtime_error ("Failed to open file");
 
 	fwrite (&header, sizeof (header), 1, file);
 	fwrite (info, sizeof (object_info), size, file);
@@ -101,18 +101,18 @@ void level_loader::load_from_file (level & dest, std::string source)
 	level_file_header header;
 
 	FILE * file;
-	fopen_s (&file, source.c_str (), "rb");
+	file = fopen (source.c_str (), "rb");
 
 	if (!file)
-		throw std::exception ("failed to open file");
+		throw std::runtime_error ("failed to open file");
 
 	fread (&header, sizeof (header), 1, file);
 
 	if (header.id != CREATOR_ID)
-		throw std::exception ("Level creator id is wrong. Maybe file corruption or error while reading.");
+		throw std::runtime_error ("Level creator id is wrong. Maybe file corruption or error while reading.");
 
 	if (header.ver != CREATOR_VERSION)
-		throw std::exception ("Old version of level file. May be errors with sync.");
+		throw std::runtime_error ("Old version of level file. May be errors with sync.");
 
 	object_info * info = new object_info[header.size];
 	for (int i = 0; i < header.size; i++)

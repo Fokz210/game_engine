@@ -1,0 +1,134 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ivan/Source/game_engine/SFML_Menu/Menu.h
+text_button.h
+/home/ivan/Source/game_engine/SFML_Menu/text_button.h
+sprite_button.h
+/home/ivan/Source/game_engine/SFML_Menu/sprite_button.h
+window_manager.h
+/home/ivan/Source/game_engine/SFML_Menu/window_manager.h
+
+/home/ivan/Source/game_engine/SFML_Menu/abstract_window.h
+SFML/Graphics.hpp
+-
+cursor_handler.h
+/home/ivan/Source/game_engine/SFML_Menu/cursor_handler.h
+
+/home/ivan/Source/game_engine/SFML_Menu/cursor_handler.h
+pch.h
+/home/ivan/Source/game_engine/SFML_Menu/pch.h
+SFML/System.hpp
+-
+SFML/Graphics.hpp
+-
+Windows.h
+-
+
+/home/ivan/Source/game_engine/SFML_Menu/framework.h
+
+/home/ivan/Source/game_engine/SFML_Menu/pch.h
+framework.h
+/home/ivan/Source/game_engine/SFML_Menu/framework.h
+
+/home/ivan/Source/game_engine/SFML_Menu/rectangular_window.h
+abstract_window.h
+/home/ivan/Source/game_engine/SFML_Menu/abstract_window.h
+
+/home/ivan/Source/game_engine/SFML_Menu/sprite_button.h
+sprite_window.h
+/home/ivan/Source/game_engine/SFML_Menu/sprite_window.h
+
+/home/ivan/Source/game_engine/SFML_Menu/sprite_window.h
+abstract_window.h
+/home/ivan/Source/game_engine/SFML_Menu/abstract_window.h
+
+/home/ivan/Source/game_engine/SFML_Menu/text_button.h
+rectangular_window.h
+/home/ivan/Source/game_engine/SFML_Menu/rectangular_window.h
+
+/home/ivan/Source/game_engine/SFML_Menu/window_manager.h
+vector
+-
+abstract_window.h
+/home/ivan/Source/game_engine/SFML_Menu/abstract_window.h
+
+/home/ivan/Source/game_engine/game engine/drawable_game_object.h
+game_object.h
+/home/ivan/Source/game_engine/game engine/game_object.h
+
+/home/ivan/Source/game_engine/game engine/game_object.h
+SFML/Graphics.hpp
+-
+
+/home/ivan/Source/game_engine/game engine/level.h
+stdio.h
+-
+test_sprite.h
+/home/ivan/Source/game_engine/game engine/test_sprite.h
+test_wall.h
+/home/ivan/Source/game_engine/game engine/test_wall.h
+light_source.h
+/home/ivan/Source/game_engine/game engine/light_source.h
+../level creator/level_header.h
+/home/ivan/Source/game_engine/level creator/level_header.h
+
+/home/ivan/Source/game_engine/game engine/level_loader.h
+cstdio
+-
+level.h
+/home/ivan/Source/game_engine/game engine/level.h
+../level creator/level_header.h
+/home/ivan/Source/game_engine/level creator/level_header.h
+
+/home/ivan/Source/game_engine/game engine/light_source.h
+game_object.h
+/home/ivan/Source/game_engine/game engine/game_object.h
+
+/home/ivan/Source/game_engine/game engine/main.cpp
+iostream
+-
+SFML/Graphics.hpp
+-
+render_manager.h
+/home/ivan/Source/game_engine/game engine/render_manager.h
+test_wall.h
+/home/ivan/Source/game_engine/game engine/test_wall.h
+level_loader.h
+/home/ivan/Source/game_engine/game engine/level_loader.h
+../SFML_Menu/Menu.h
+/home/ivan/Source/game_engine/SFML_Menu/Menu.h
+
+/home/ivan/Source/game_engine/game engine/opaque_object.h
+game_object.h
+/home/ivan/Source/game_engine/game engine/game_object.h
+
+/home/ivan/Source/game_engine/game engine/render_manager.h
+vector
+-
+drawable_game_object.h
+/home/ivan/Source/game_engine/game engine/drawable_game_object.h
+light_source.h
+/home/ivan/Source/game_engine/game engine/light_source.h
+opaque_object.h
+/home/ivan/Source/game_engine/game engine/opaque_object.h
+level.h
+/home/ivan/Source/game_engine/game engine/level.h
+
+/home/ivan/Source/game_engine/game engine/test_sprite.h
+drawable_game_object.h
+/home/ivan/Source/game_engine/game engine/drawable_game_object.h
+
+/home/ivan/Source/game_engine/game engine/test_wall.h
+test_sprite.h
+/home/ivan/Source/game_engine/game engine/test_sprite.h
+opaque_object.h
+/home/ivan/Source/game_engine/game engine/opaque_object.h
+
+/home/ivan/Source/game_engine/level creator/level_header.h
+

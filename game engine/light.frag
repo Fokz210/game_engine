@@ -1,3 +1,4 @@
+#version 150
 #define shade_res 10.0
 
 uniform float frame;
